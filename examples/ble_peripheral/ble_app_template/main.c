@@ -688,13 +688,6 @@ static void buttons_leds_init(bool * p_erase_bonds){
     *p_erase_bonds = (startup_event == BSP_EVENT_CLEAR_BONDING_DATA);
 }
 
-//Function for sending string to peer
-uint32_t ble_nus_string_send(ble_nus_t* p_nus, uint8_t* p_string, uint16_t length){
-	
-	
-	return NRF_SUCCESS;
-}
-
 // Function for the Power manager.
 static void power_manage(void)
 {
