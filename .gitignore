@@ -31,4 +31,5 @@
 *.out
 *.app
 
-_build/
+examples/ble_peripheral/ble_app_template/pca10028/s130/armgcc/_build/
+examples/ble_peripheral/ble_app_template/pca10028/s130/armgcc/.settings/
