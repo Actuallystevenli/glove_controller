@@ -1,0 +1,397 @@
+
+
+***************************************************************************************
+***                                                                                 ***
+***                                     Ingest                                      ***
+***                                                                                 ***
+***************************************************************************************
+
+  Loading 45 sections from 'SEGGER_THUMB_Startup.o'
+  Loading 98 symbols from 'SEGGER_THUMB_Startup.o'
+  Loading 33 sections from 'system_nrf51.o'
+  Loading 40 symbols from 'system_nrf51.o'
+  Loading 20 sections from 'ses_nrf51_startup.o'
+  Loading 55 symbols from 'ses_nrf51_startup.o'
+      Strong symbol SystemInit [system_nrf51.o] kept after finding weak definition [ses_nrf51_startup.o]
+  Loading 155 sections from 'main.o'
+  Loading 403 symbols from 'main.o'
+  Loading 76 sections from 'boards.o'
+  Loading 118 symbols from 'boards.o'
+  Loading 75 sections from 'bsp.o'
+  Loading 134 symbols from 'bsp.o'
+  Loading 30 sections from 'bsp_nfc.o'
+  Loading 27 symbols from 'bsp_nfc.o'
+  Loading 118 sections from 'ble_advdata.o'
+  Loading 268 symbols from 'ble_advdata.o'
+  Loading 123 sections from 'ble_conn_params.o'
+  Loading 290 symbols from 'ble_conn_params.o'
+  Loading 109 sections from 'ble_srv_common.o'
+  Loading 248 symbols from 'ble_srv_common.o'
+  Loading 191 sections from 'nrf_drv_clock.o'
+  Loading 477 symbols from 'nrf_drv_clock.o'
+      Weak symbol POWER_CLOCK_IRQHandler [ses_nrf51_startup.o] replaced by strong definition [nrf_drv_clock.o]
+  Loading 77 sections from 'nrf_drv_common.o'
+  Loading 168 symbols from 'nrf_drv_common.o'
+  Loading 182 sections from 'nrf_drv_gpiote.o'
+  Loading 391 symbols from 'nrf_drv_gpiote.o'
+      Weak symbol GPIOTE_IRQHandler [ses_nrf51_startup.o] replaced by strong definition [nrf_drv_gpiote.o]
+  Loading 155 sections from 'nrf_drv_uart.o'
+  Loading 335 symbols from 'nrf_drv_uart.o'
+      Weak symbol UART0_IRQHandler [ses_nrf51_startup.o] replaced by strong definition [nrf_drv_uart.o]
+  Loading 45 sections from 'app_button.o'
+  Loading 71 symbols from 'app_button.o'
+  Loading 32 sections from 'app_error.o'
+  Loading 33 symbols from 'app_error.o'
+  Loading 28 sections from 'app_error_weak.o'
+  Loading 24 symbols from 'app_error_weak.o'
+  Loading 143 sections from 'app_timer.o'
+  Loading 317 symbols from 'app_timer.o'
+      Weak symbol RTC1_IRQHandler [ses_nrf51_startup.o] replaced by strong definition [app_timer.o]
+      Weak symbol SWI0_IRQHandler [ses_nrf51_startup.o] replaced by strong definition [app_timer.o]
+  Loading 83 sections from 'app_util_platform.o'
+  Loading 177 symbols from 'app_util_platform.o'
+  Loading 20 sections from 'hardfault_implementation.o'
+  Loading 14 symbols from 'hardfault_implementation.o'
+  Loading 27 sections from 'nrf_assert.o'
+  Loading 22 symbols from 'nrf_assert.o'
+      Strong symbol assert_nrf_callback [main.o] kept after finding weak definition [nrf_assert.o]
+  Loading 20 sections from 'sdk_errors.o'
+  Loading 14 symbols from 'sdk_errors.o'
+  Loading 20 sections from 'nrf_log_backend_serial.o'
+  Loading 14 symbols from 'nrf_log_backend_serial.o'
+  Loading 20 sections from 'nrf_log_frontend.o'
+  Loading 14 symbols from 'nrf_log_frontend.o'
+  Loading 11 sections from 'RTT_Syscalls_KEIL.o'
+  Loading 9 symbols from 'RTT_Syscalls_KEIL.o'
+  Loading 116 sections from 'SEGGER_RTT.o'
+  Loading 246 symbols from 'SEGGER_RTT.o'
+  Loading 11 sections from 'SEGGER_RTT_printf.o'
+  Loading 9 symbols from 'SEGGER_RTT_printf.o'
+  Loading 187 sections from 'softdevice_handler.o'
+  Loading 481 symbols from 'softdevice_handler.o'
+      Weak symbol SWI2_IRQHandler [ses_nrf51_startup.o] replaced by strong definition [softdevice_handler.o]
+  Loading archive: libdebugio_mempoll_v6m_t_le_eabi.a
+      Detected symbol lookup table
+      Loading 13 sections from 'mempoll_debug_operations.o (libdebugio_mempoll_v6m_t_le_eabi.a)'
+      Loading 19 symbols from 'mempoll_debug_operations.o (libdebugio_mempoll_v6m_t_le_eabi.a)'
+      Loading 11 sections from 'do_nv_debug_operation.o (libdebugio_mempoll_v6m_t_le_eabi.a)'
+      Loading 11 symbols from 'do_nv_debug_operation.o (libdebugio_mempoll_v6m_t_le_eabi.a)'
+  Loading archive: libm_v6m_t_le_eabi.a
+      Detected symbol lookup table
+      Loading 21 sections from 'libm.o (libm_v6m_t_le_eabi.a)'
+      Loading 58 symbols from 'libm.o (libm_v6m_t_le_eabi.a)'
+      Loading 80 sections from 'libm_asm.o (libm_v6m_t_le_eabi.a)'
+      Loading 276 symbols from 'libm_asm.o (libm_v6m_t_le_eabi.a)'
+      Loading 146 sections from 'libm2.o (libm_v6m_t_le_eabi.a)'
+      Loading 370 symbols from 'libm2.o (libm_v6m_t_le_eabi.a)'
+      Loading 14 sections from 'libm2_asm.o (libm_v6m_t_le_eabi.a)'
+      Loading 29 symbols from 'libm2_asm.o (libm_v6m_t_le_eabi.a)'
+      Loading 21 sections from 'libm_fixed.o (libm_v6m_t_le_eabi.a)'
+      Loading 39 symbols from 'libm_fixed.o (libm_v6m_t_le_eabi.a)'
+          Weak symbol expf [libm2.o (libm_v6m_t_le_eabi.a)] replaced by strong definition [libm_fixed.o (libm_v6m_t_le_eabi.a)]
+      Loading 251 sections from 'fdlibm.o (libm_v6m_t_le_eabi.a)'
+      Loading 642 symbols from 'fdlibm.o (libm_v6m_t_le_eabi.a)'
+  Loading archive: libc_v6m_t_le_eabi.a
+      Detected symbol lookup table
+      Loading 86 sections from 'libc.o (libc_v6m_t_le_eabi.a)'
+      Loading 234 symbols from 'libc.o (libc_v6m_t_le_eabi.a)'
+      Loading 37 sections from 'libc_asm.o (libc_v6m_t_le_eabi.a)'
+      Loading 101 symbols from 'libc_asm.o (libc_v6m_t_le_eabi.a)'
+      Loading 1140 sections from 'libc2.o (libc_v6m_t_le_eabi.a)'
+      Loading 2281 symbols from 'libc2.o (libc_v6m_t_le_eabi.a)'
+      Loading 19 sections from 'libc2_asm.o (libc_v6m_t_le_eabi.a)'
+      Loading 43 symbols from 'libc2_asm.o (libc_v6m_t_le_eabi.a)'
+      Loading 39 sections from 'libc2_wchar.o (libc_v6m_t_le_eabi.a)'
+      Loading 112 symbols from 'libc2_wchar.o (libc_v6m_t_le_eabi.a)'
+  Loading archive: libcpp_v6m_t_le_eabi.a
+      Detected symbol lookup table
+      Loading 45 sections from 'new.o (libcpp_v6m_t_le_eabi.a)'
+      Loading 82 symbols from 'new.o (libcpp_v6m_t_le_eabi.a)'
+  Loading archive: libdebugio_v6m_t_le_eabi.a
+      Detected symbol lookup table
+      Loading 136 sections from 'libdebugio.o (libdebugio_v6m_t_le_eabi.a)'
+      Loading 213 symbols from 'libdebugio.o (libdebugio_v6m_t_le_eabi.a)'
+      Loading 16 sections from 'libdebugio_asm.o (libdebugio_v6m_t_le_eabi.a)'
+      Loading 22 symbols from 'libdebugio_asm.o (libdebugio_v6m_t_le_eabi.a)'
+  Loading 88 sections from 'libvfprintf_v6m_t_le_eabi.o'
+  Loading 236 symbols from 'libvfprintf_v6m_t_le_eabi.o'
+  Loading 62 sections from 'libvfscanf_v6m_t_le_eabi.o'
+  Loading 108 symbols from 'libvfscanf_v6m_t_le_eabi.o'
+
+
+***************************************************************************************
+***                                                                                 ***
+***                                  Find sections                                  ***
+***                                                                                 ***
+***************************************************************************************
+
+  Selecting ses_nrf51_startup.o to define _vectors
+      Definition:     _vectors
+      Reference:      __stack_end__
+      Weak reference: NMI_Handler
+      Weak reference: HardFault_Handler
+      Weak reference: SVC_Handler
+      Weak reference: PendSV_Handler
+      Weak reference: SysTick_Handler
+      Weak reference: POWER_CLOCK_IRQHandler
+      Weak reference: RADIO_IRQHandler
+      Weak reference: UART0_IRQHandler
+      Weak reference: SPI0_TWI0_IRQHandler
+      Weak reference: SPI1_TWI1_IRQHandler
+      Weak reference: GPIOTE_IRQHandler
+      Weak reference: ADC_IRQHandler
+      Weak reference: TIMER0_IRQHandler
+      Weak reference: TIMER1_IRQHandler
+      Weak reference: TIMER2_IRQHandler
+      Weak reference: RTC0_IRQHandler
+      Weak reference: TEMP_IRQHandler
+      Weak reference: RNG_IRQHandler
+      Weak reference: ECB_IRQHandler
+      Weak reference: CCM_AAR_IRQHandler
+      Weak reference: WDT_IRQHandler
+      Weak reference: RTC1_IRQHandler
+      Weak reference: QDEC_IRQHandler
+      Weak reference: LPCOMP_IRQHandler
+      Weak reference: SWI0_IRQHandler
+      Weak reference: SWI1_IRQHandler
+      Weak reference: SWI2_IRQHandler
+      Weak reference: SWI3_IRQHandler
+      Weak reference: SWI4_IRQHandler
+      Weak reference: SWI5_IRQHandler
+  Selecting ses_nrf51_startup.o to define ADC_IRQHandler
+      Definition:     ADC_IRQHandler
+      Weak reference: SystemInit
+      Reference:      _start
+      Reference:      __SRAM_segment_end__
+  Selecting ses_nrf51_startup.o to define CCM_AAR_IRQHandler
+      Definition:     CCM_AAR_IRQHandler
+  Selecting ses_nrf51_startup.o to define ECB_IRQHandler
+      Definition:     ECB_IRQHandler
+  Selecting nrf_drv_gpiote.o to define GPIOTE_IRQHandler
+      Definition:     GPIOTE_IRQHandler
+  Selecting ses_nrf51_startup.o to define HardFault_Handler
+      Definition:     HardFault_Handler
+  Selecting ses_nrf51_startup.o to define LPCOMP_IRQHandler
+      Definition:     LPCOMP_IRQHandler
+  Selecting ses_nrf51_startup.o to define NMI_Handler
+      Definition:     NMI_Handler
+  Selecting nrf_drv_clock.o to define POWER_CLOCK_IRQHandler
+      Definition:     POWER_CLOCK_IRQHandler
+  Selecting ses_nrf51_startup.o to define PendSV_Handler
+      Definition:     PendSV_Handler
+  Selecting ses_nrf51_startup.o to define QDEC_IRQHandler
+      Definition:     QDEC_IRQHandler
+  Selecting ses_nrf51_startup.o to define RADIO_IRQHandler
+      Definition:     RADIO_IRQHandler
+  Selecting ses_nrf51_startup.o to define RNG_IRQHandler
+      Definition:     RNG_IRQHandler
+  Selecting ses_nrf51_startup.o to define RTC0_IRQHandler
+      Definition:     RTC0_IRQHandler
+  Selecting app_timer.o to define RTC1_IRQHandler
+      Definition:     RTC1_IRQHandler
+      Reference:      app_error_handler_bare
+  Selecting ses_nrf51_startup.o to define SPI0_TWI0_IRQHandler
+      Definition:     SPI0_TWI0_IRQHandler
+  Selecting ses_nrf51_startup.o to define SPI1_TWI1_IRQHandler
+      Definition:     SPI1_TWI1_IRQHandler
+  Selecting ses_nrf51_startup.o to define SVC_Handler
+      Definition:     SVC_Handler
+  Selecting app_timer.o to define SWI0_IRQHandler
+      Definition:     SWI0_IRQHandler
+      Reference:      SystemCoreClock
+  Selecting ses_nrf51_startup.o to define SWI1_IRQHandler
+      Definition:     SWI1_IRQHandler
+  Selecting softdevice_handler.o to define SWI2_IRQHandler
+      Definition:     SWI2_IRQHandler
+      Reference:      intern_softdevice_events_execute
+  Selecting ses_nrf51_startup.o to define SWI3_IRQHandler
+      Definition:     SWI3_IRQHandler
+  Selecting ses_nrf51_startup.o to define SWI4_IRQHandler
+      Definition:     SWI4_IRQHandler
+  Selecting ses_nrf51_startup.o to define SWI5_IRQHandler
+      Definition:     SWI5_IRQHandler
+  Selecting ses_nrf51_startup.o to define SysTick_Handler
+      Definition:     SysTick_Handler
+  Selecting system_nrf51.o to define SystemCoreClock
+      Definition:     SystemCoreClock
+  Selecting system_nrf51.o to define SystemInit
+      Definition:     SystemInit
+  Selecting ses_nrf51_startup.o to define TEMP_IRQHandler
+      Definition:     TEMP_IRQHandler
+  Selecting ses_nrf51_startup.o to define TIMER0_IRQHandler
+      Definition:     TIMER0_IRQHandler
+  Selecting ses_nrf51_startup.o to define TIMER1_IRQHandler
+      Definition:     TIMER1_IRQHandler
+  Selecting ses_nrf51_startup.o to define TIMER2_IRQHandler
+      Definition:     TIMER2_IRQHandler
+  Selecting nrf_drv_uart.o to define UART0_IRQHandler
+      Definition:     UART0_IRQHandler
+  Selecting ses_nrf51_startup.o to define WDT_IRQHandler
+      Definition:     WDT_IRQHandler
+  Selecting SEGGER_THUMB_Startup.o to define _start
+      Definition:     _start
+      Reference:      __stack_end__
+      Reference:      __SEGGER_init_table__
+      Reference:      __heap_start__
+      Reference:      __heap_end__
+      Reference:      __ctors_start__
+      Reference:      __ctors_end__
+      Reference:      main
+  Selecting app_error.o to define app_error_handler_bare
+      Definition:     app_error_handler_bare
+      Reference:      app_error_fault_handler
+  Selecting app_error_weak.o to define app_error_fault_handler
+      Definition:     app_error_fault_handler
+  Selecting softdevice_handler.o to define intern_softdevice_events_execute
+      Definition:     intern_softdevice_events_execute
+      Reference:      nrf_drv_clock_on_soc_event
+  Selecting main.o to define main
+      Definition:     main
+      Reference:      app_timer_init
+      Reference:      bsp_init
+      Reference:      softdevice_handler_init
+      Reference:      softdevice_enable_get_default_config
+      Reference:      softdevice_enable
+      Reference:      memset
+      Reference:      ble_advdata_set
+      Reference:      bsp_indication_set
+  Selecting app_timer.o to define app_timer_init
+      Definition:     app_timer_init
+  Selecting ble_advdata.o to define ble_advdata_set
+      Definition:     ble_advdata_set
+      Reference:      adv_data_encode
+  Selecting ble_advdata.o to define adv_data_encode
+      Definition:     adv_data_encode
+      Reference:      memcpy
+  Selecting bsp.o to define bsp_indication_set
+      Definition:     bsp_indication_set
+      Reference:      bsp_board_leds_off
+      Reference:      bsp_board_led_state_get
+      Reference:      bsp_board_led_off
+      Reference:      bsp_board_led_on
+      Reference:      __aeabi_uidiv
+      Reference:      app_timer_start
+      Reference:      bsp_board_led_invert
+      Reference:      bsp_board_leds_on
+      Reference:      app_timer_stop
+  Selecting libc_asm.o (libc_v6m_t_le_eabi.a) to define __aeabi_uidiv
+      Definition:     __aeabi_uidiv
+  Selecting app_timer.o to define app_timer_start
+      Definition:     app_timer_start
+      Reference:      app_util_critical_region_enter
+      Reference:      app_util_critical_region_exit
+  Selecting app_timer.o to define app_timer_stop
+      Definition:     app_timer_stop
+  Selecting app_util_platform.o to define app_util_critical_region_enter
+      Definition:     app_util_critical_region_enter
+      Reference:      nrf_nvic_state
+  Selecting app_util_platform.o to define app_util_critical_region_exit
+      Definition:     app_util_critical_region_exit
+  Selecting boards.o to define bsp_board_led_invert
+      Definition:     bsp_board_led_invert
+  Selecting boards.o to define bsp_board_led_off
+      Definition:     bsp_board_led_off
+  Selecting boards.o to define bsp_board_led_on
+      Definition:     bsp_board_led_on
+  Selecting boards.o to define bsp_board_led_state_get
+      Definition:     bsp_board_led_state_get
+  Selecting boards.o to define bsp_board_leds_off
+      Definition:     bsp_board_leds_off
+  Selecting boards.o to define bsp_board_leds_on
+      Definition:     bsp_board_leds_on
+  Selecting bsp.o to define bsp_init
+      Definition:     bsp_init
+      Reference:      bsp_event_to_button_action_assign
+      Reference:      app_button_init
+      Reference:      app_button_enable
+      Reference:      app_timer_create
+      Reference:      bsp_board_leds_init
+      Reference:      bsp_board_pin_to_button_idx
+  Selecting app_button.o to define app_button_enable
+      Definition:     app_button_enable
+      Reference:      nrf_drv_gpiote_in_event_enable
+  Selecting app_button.o to define app_button_init
+      Definition:     app_button_init
+      Reference:      nrf_drv_gpiote_is_init
+      Reference:      nrf_drv_gpiote_init
+      Reference:      nrf_drv_gpiote_in_init
+      Reference:      nrf_drv_gpiote_in_is_set
+  Selecting app_timer.o to define app_timer_create
+      Definition:     app_timer_create
+  Selecting boards.o to define bsp_board_leds_init
+      Definition:     bsp_board_leds_init
+  Selecting boards.o to define bsp_board_pin_to_button_idx
+      Definition:     bsp_board_pin_to_button_idx
+  Selecting bsp.o to define bsp_event_to_button_action_assign
+      Definition:     bsp_event_to_button_action_assign
+  Selecting libc2_asm.o (libc_v6m_t_le_eabi.a) to define memcpy
+      Definition:     memcpy
+  Selecting libc2_asm.o (libc_v6m_t_le_eabi.a) to define memset
+      Definition:     memset
+  Selecting nrf_drv_clock.o to define nrf_drv_clock_on_soc_event
+      Definition:     nrf_drv_clock_on_soc_event
+  Selecting nrf_drv_gpiote.o to define nrf_drv_gpiote_in_event_enable
+      Definition:     nrf_drv_gpiote_in_event_enable
+  Selecting nrf_drv_gpiote.o to define nrf_drv_gpiote_in_init
+      Definition:     nrf_drv_gpiote_in_init
+  Selecting nrf_drv_gpiote.o to define nrf_drv_gpiote_in_is_set
+      Definition:     nrf_drv_gpiote_in_is_set
+  Selecting nrf_drv_gpiote.o to define nrf_drv_gpiote_init
+      Definition:     nrf_drv_gpiote_init
+      Reference:      nrf_drv_common_irq_enable
+  Selecting nrf_drv_common.o to define nrf_drv_common_irq_enable
+      Definition:     nrf_drv_common_irq_enable
+  Selecting nrf_drv_gpiote.o to define nrf_drv_gpiote_is_init
+      Definition:     nrf_drv_gpiote_is_init
+  Selecting app_util_platform.o to define nrf_nvic_state
+      Definition:     nrf_nvic_state
+  Selecting ses_nrf51_startup.o to define reset_handler
+      Definition:     reset_handler
+  Selecting softdevice_handler.o to define softdevice_enable
+      Definition:     softdevice_enable
+      Reference:      __data_start__
+  Selecting softdevice_handler.o to define softdevice_enable_get_default_config
+      Definition:     softdevice_enable_get_default_config
+  Selecting softdevice_handler.o to define softdevice_handler_init
+      Definition:     softdevice_handler_init
+      Reference:      nrf_drv_clock_on_sd_enable
+      Reference:      softdevice_fault_handler
+  Selecting nrf_drv_clock.o to define nrf_drv_clock_on_sd_enable
+      Definition:     nrf_drv_clock_on_sd_enable
+      Reference:      nrf_drv_clock_init
+  Selecting nrf_drv_clock.o to define nrf_drv_clock_init
+      Definition:     nrf_drv_clock_init
+      Reference:      softdevice_handler_is_enabled
+  Selecting softdevice_handler.o to define softdevice_fault_handler
+      Definition:     softdevice_fault_handler
+  Selecting softdevice_handler.o to define softdevice_handler_is_enabled
+      Definition:     softdevice_handler_is_enabled
+
+
+***************************************************************************************
+***                                                                                 ***
+***                                  Parse script                                   ***
+***                                                                                 ***
+***************************************************************************************
+
+  Current undefined symbol list (requiring resolution):
+      __SEGGER_init_table__
+      __SRAM_segment_end__
+      __ctors_end__
+      __ctors_start__
+      __data_start__
+      __heap_end__
+      __heap_start__
+      __stack_end__
+  Define symbols added by command line:
+      Define symbol __STACKSIZE__ as 1024
+      Define global symbol __STACKSIZE__ = 0x00000400
+      Define symbol __STACKSIZE_PROCESS__ as 0
+      Define global symbol __STACKSIZE_PROCESS__ = 0x00000000
+      Define symbol __HEAPSIZE__ as 1024
+      Define global symbol __HEAPSIZE__ = 0x00000400
+      Define symbol __vfprintf as __vfprintf_int_nwp
+      Define symbol __vfscanf as __vfscanf_int
+  Define regions added by command line:
+      Add 'FLASH' starting at 0x00000000 of size 0x00040000
+      Add 'RAM' starting at 0x20000000 of size 0x00008000

@@ -1,0 +1,1620 @@
+
+
+***************************************************************************************
+***                                                                                 ***
+***                                LINK INFORMATION                                 ***
+***                                                                                 ***
+***************************************************************************************
+
+Copyright (c) 2017-2018 SEGGER Microcontroller GmbH    www.segger.com
+SEGGER Linker 2.26 compiled Nov 26 2018 19:10:22
+
+Command line:
+  --add-region
+  FLASH=0x00040000@0x00000000
+  --add-region
+  RAM=0x00008000@0x20000000
+  --defsym=__STACKSIZE__=1024
+  --defsym=__STACKSIZE_PROCESS__=0
+  --defsym=__HEAPSIZE__=1024
+  --full-section-headers
+  -ereset_handler
+  --defsym=__vfprintf=__vfprintf_int_nwp
+  --defsym=__vfscanf=__vfscanf_int
+  --silent
+  --list-all-undefineds
+  --fatal-warnings
+  -EL
+  -mcpu=cortex-m0
+  --gc-sections
+  -TC:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 4.12/samples/SEGGER_Flash.icf
+  -Map
+  Output/nrf51422_xxac/Exe/ble_app_cscs_pca10028_s130.map
+  -u_vectors
+  -o
+  Output/nrf51422_xxac/Exe/ble_app_cscs_pca10028_s130.elf
+  --emit-relocs
+  --start-group
+  Output/ble_app_cscs_pca10028_s130 nrf51422_xxac/Obj/SEGGER_THUMB_Startup.o
+  Output/ble_app_cscs_pca10028_s130 nrf51422_xxac/Obj/system_nrf51.o
+  Output/ble_app_cscs_pca10028_s130 nrf51422_xxac/Obj/ses_nrf51_startup.o
+  Output/ble_app_cscs_pca10028_s130 nrf51422_xxac/Obj/main.o
+  Output/ble_app_cscs_pca10028_s130 nrf51422_xxac/Obj/boards.o
+  Output/ble_app_cscs_pca10028_s130 nrf51422_xxac/Obj/bsp.o
+  Output/ble_app_cscs_pca10028_s130 nrf51422_xxac/Obj/bsp_btn_ble.o
+  Output/ble_app_cscs_pca10028_s130 nrf51422_xxac/Obj/bsp_nfc.o
+  Output/ble_app_cscs_pca10028_s130 nrf51422_xxac/Obj/ble_advdata.o
+  Output/ble_app_cscs_pca10028_s130 nrf51422_xxac/Obj/ble_advertising.o
+  Output/ble_app_cscs_pca10028_s130 nrf51422_xxac/Obj/ble_conn_params.o
+  Output/ble_app_cscs_pca10028_s130 nrf51422_xxac/Obj/ble_conn_state.o
+  Output/ble_app_cscs_pca10028_s130 nrf51422_xxac/Obj/ble_srv_common.o
+  Output/ble_app_cscs_pca10028_s130 nrf51422_xxac/Obj/gatt_cache_manager.o
+  Output/ble_app_cscs_pca10028_s130 nrf51422_xxac/Obj/gatts_cache_manager.o
+  Output/ble_app_cscs_pca10028_s130 nrf51422_xxac/Obj/id_manager.o
+  Output/ble_app_cscs_pca10028_s130 nrf51422_xxac/Obj/peer_data.o
+  Output/ble_app_cscs_pca10028_s130 nrf51422_xxac/Obj/peer_data_storage.o
+  Output/ble_app_cscs_pca10028_s130 nrf51422_xxac/Obj/peer_database.o
+  Output/ble_app_cscs_pca10028_s130 nrf51422_xxac/Obj/peer_id.o
+  Output/ble_app_cscs_pca10028_s130 nrf51422_xxac/Obj/peer_manager.o
+  Output/ble_app_cscs_pca10028_s130 nrf51422_xxac/Obj/pm_buffer.o
+  Output/ble_app_cscs_pca10028_s130 nrf51422_xxac/Obj/pm_mutex.o
+  Output/ble_app_cscs_pca10028_s130 nrf51422_xxac/Obj/security_dispatcher.o
+  Output/ble_app_cscs_pca10028_s130 nrf51422_xxac/Obj/security_manager.o
+  Output/ble_app_cscs_pca10028_s130 nrf51422_xxac/Obj/ble_bas.o
+  Output/ble_app_cscs_pca10028_s130 nrf51422_xxac/Obj/ble_cscs.o
+  Output/ble_app_cscs_pca10028_s130 nrf51422_xxac/Obj/ble_dis.o
+  Output/ble_app_cscs_pca10028_s130 nrf51422_xxac/Obj/ble_sc_ctrlpt.o
+  Output/ble_app_cscs_pca10028_s130 nrf51422_xxac/Obj/nrf_drv_clock.o
+  Output/ble_app_cscs_pca10028_s130 nrf51422_xxac/Obj/nrf_drv_common.o
+  Output/ble_app_cscs_pca10028_s130 nrf51422_xxac/Obj/nrf_drv_gpiote.o
+  Output/ble_app_cscs_pca10028_s130 nrf51422_xxac/Obj/nrf_drv_uart.o
+  Output/ble_app_cscs_pca10028_s130 nrf51422_xxac/Obj/app_button.o
+  Output/ble_app_cscs_pca10028_s130 nrf51422_xxac/Obj/app_error.o
+  Output/ble_app_cscs_pca10028_s130 nrf51422_xxac/Obj/app_error_weak.o
+  Output/ble_app_cscs_pca10028_s130 nrf51422_xxac/Obj/app_timer.o
+  Output/ble_app_cscs_pca10028_s130 nrf51422_xxac/Obj/app_util_platform.o
+  Output/ble_app_cscs_pca10028_s130 nrf51422_xxac/Obj/crc16.o
+  Output/ble_app_cscs_pca10028_s130 nrf51422_xxac/Obj/fds.o
+  Output/ble_app_cscs_pca10028_s130 nrf51422_xxac/Obj/fstorage.o
+  Output/ble_app_cscs_pca10028_s130 nrf51422_xxac/Obj/hardfault_implementation.o
+  Output/ble_app_cscs_pca10028_s130 nrf51422_xxac/Obj/nrf_assert.o
+  Output/ble_app_cscs_pca10028_s130 nrf51422_xxac/Obj/sdk_errors.o
+  Output/ble_app_cscs_pca10028_s130 nrf51422_xxac/Obj/sdk_mapped_flags.o
+  Output/ble_app_cscs_pca10028_s130 nrf51422_xxac/Obj/sensorsim.o
+  Output/ble_app_cscs_pca10028_s130 nrf51422_xxac/Obj/nrf_log_backend_serial.o
+  Output/ble_app_cscs_pca10028_s130 nrf51422_xxac/Obj/nrf_log_frontend.o
+  Output/ble_app_cscs_pca10028_s130 nrf51422_xxac/Obj/RTT_Syscalls_KEIL.o
+  Output/ble_app_cscs_pca10028_s130 nrf51422_xxac/Obj/SEGGER_RTT.o
+  Output/ble_app_cscs_pca10028_s130 nrf51422_xxac/Obj/SEGGER_RTT_printf.o
+  Output/ble_app_cscs_pca10028_s130 nrf51422_xxac/Obj/softdevice_handler.o
+  C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 4.12/lib/libdebugio_mempoll_v6m_t_le_eabi.a
+  C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 4.12/lib/libm_v6m_t_le_eabi.a
+  C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 4.12/lib/libc_v6m_t_le_eabi.a
+  C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 4.12/lib/libcpp_v6m_t_le_eabi.a
+  C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 4.12/lib/libdebugio_v6m_t_le_eabi.a
+  C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 4.12/lib/libvfprintf_v6m_t_le_eabi.o
+  C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 4.12/lib/libvfscanf_v6m_t_le_eabi.o
+  --end-group
+
+
+***************************************************************************************
+***                                                                                 ***
+***                                  LINKER SCRIPT                                  ***
+***                                                                                 ***
+***************************************************************************************
+
+Read linker script from 'C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 4.12/samples/SEGGER_Flash.icf':
+  
+  // **********************************************************************
+  // *                    SEGGER Microcontroller GmbH                     *
+  // *                        The Embedded Experts                        *
+  // **********************************************************************
+  // *                                                                    *
+  // *            (c) 2014 - 2018 SEGGER Microcontroller GmbH             *
+  // *            (c) 2001 - 2018 Rowley Associates Limited               *
+  // *                                                                    *
+  // *           www.segger.com     Support: support@segger.com           *
+  // *                                                                    *
+  // **********************************************************************
+  // *                                                                    *
+  // * All rights reserved.                                               *
+  // *                                                                    *
+  // * Redistribution and use in source and binary forms, with or         *
+  // * without modification, are permitted provided that the following    *
+  // * conditions are met:                                                *
+  // *                                                                    *
+  // * - Redistributions of source code must retain the above copyright   *
+  // *   notice, this list of conditions and the following disclaimer.    *
+  // *                                                                    *
+  // * - Neither the name of SEGGER Microcontroller GmbH                  *
+  // *   nor the names of its contributors may be used to endorse or      *
+  // *   promote products derived from this software without specific     *
+  // *   prior written permission.                                        *
+  // *                                                                    *
+  // * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND             *
+  // * CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,        *
+  // * INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF           *
+  // * MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE           *
+  // * DISCLAIMED.                                                        *
+  // * IN NO EVENT SHALL SEGGER Microcontroller GmbH BE LIABLE FOR        *
+  // * ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR           *
+  // * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT  *
+  // * OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;    *
+  // * OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF      *
+  // * LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT          *
+  // * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE  *
+  // * USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH   *
+  // * DAMAGE.                                                            *
+  // *                                                                    *
+  // **********************************************************************
+  
+  define memory with size = 4G;
+  //
+  // Block definitions
+  //
+  define block ctors { section .ctors, section .ctors.*, block with alphabetical order { init_array } };
+  define block dtors { section .dtors, section .dtors.*, block with reverse alphabetical order { fini_array } };
+  define block exidx { section .ARM.exidx, section .ARM.exidx.* };
+  define block tbss  { section .tbss,  section .tbss.*  };
+  define block tdata { section .tdata, section .tdata.* };
+  define block tls   { block tbss, block tdata };
+  define block tdata_load { copy of block tdata };
+  define block heap  with size = __HEAPSIZE__,  alignment = 8, /* fill =0x00, */ readwrite access { };
+  define block stack with size = __STACKSIZE__, alignment = 8, /* fill =0xCD, */ readwrite access { };
+  //
+  // Explicit initialization settings for sections
+  //
+  do not initialize                           { section .non_init, section .non_init.* };
+  initialize by copy /* with packing=auto */  { section .data, section .data.* };
+  initialize by copy /* with packing=auto */  { section .fast, section .fast.* };
+  //
+  // ROM Placement
+  //
+  place at start of FLASH                 { 
+                                             section .vectors                         // Vector table section
+                                          };
+  place in FLASH with minimum size order  { 
+                                             section .init, section .init.*,          // Init code section
+                                             section .text, section .text.*,          // Code section
+                                             section .rodata, section .rodata.*,      // Read-only data section
+                                             section .segger.*,                       // Auto-generated initialization
+                                             block exidx,                             // ARM exception unwinding block
+                                             block ctors,                             // Constructors block
+                                             block dtors                              // Destructors block
+                                           };
+  place in FLASH                           { 
+                                             block tdata_load                       // Thread-local-storage load image
+                                           };
+  //                                      
+  // RAM Placement                        
+  //                                      
+  place in RAM                             {                                          // Special sections
+                                             section .non_init, section .non_init.*,  // No initialization section
+                                             block tls                                // Thread-local-storage block
+                                           };
+  place in RAM with auto order             {                                          // Initialized sections
+                                             section .fast, section .fast.*,          // "ramfunc" section
+                                             section .data, section .data.*,          // Initialized data section
+                                             section .bss, section .bss.*             // Static data section
+                                           };
+  place in RAM                             { 
+                                             /* expandable */ block heap              // Heap reserved block
+                                           };
+  place at end of RAM                      { 
+                                             block stack                              // Stack reserved block at the end
+                                           };
+
+
+***************************************************************************************
+***                                                                                 ***
+***                                PLACEMENT SUMMARY                                ***
+***                                                                                 ***
+***************************************************************************************
+
+place at 0x00000000
+
+  Section                  Type  Address       Size  Align  Object
+  -------                  ----  -------       ----  -----  ------
+  .vectors                 Code  00000000      0xc0      2  ses_nrf51_startup.o
+
+place at 0x20008000
+
+  Section                  Type  Address       Size  Align  Object
+  -------                  ----  -------       ----  -----  ------
+
+place in [0x00000000 to 0x0003ffff] with maximum packing
+
+  Section                  Type  Address       Size  Align  Object
+  -------                  ----  -------       ----  -----  ------
+  .init                    Code  000000c0      0x64      4  SEGGER_THUMB_Startup.o
+  .init                    Code  00000124      0x68      4  ses_nrf51_startup.o
+  .text.SystemInit         Code  0000018c      0x70      4  system_nrf51.o
+  .text.is_manual_peripheral_setup_needed
+                           Code  000001fc      0x78      4  system_nrf51.o
+  .text.is_disabled_in_debug_needed
+                           Code  00000274      0x48      4  system_nrf51.o
+  .text.is_peripheral_domain_setup_needed
+                           Code  000002bc      0x60      4  system_nrf51.o
+  .text.timers_init        Code  0000031c      0x84      4  main.o
+  .text.sc_ctrlpt_event_handler
+                           Code  000003a0      0x38      4  main.o
+  .text.services_init      Code  000003d8     0x250      4  main.o
+  .text.csc_meas_timeout_handler
+                           Code  00000628      0x9c      4  main.o
+  .text.sensor_simulator_init
+                           Code  000006c4      0xa0      4  main.o
+  .text.csc_sim_measurement
+                           Code  00000764     0x1c4      4  main.o
+  .text.battery_level_update
+                           Code  00000928      0x6c      4  main.o
+  .text.gap_params_init    Code  00000994      0xc4      4  main.o
+  .text.pm_evt_handler     Code  00000a58      0xdc      4  main.o
+  .text.bsp_event_handler  Code  00000b34      0x90      4  main.o
+  .text.ble_stack_init     Code  00000bc4      0xc0      4  main.o
+  .text.peer_manager_init  Code  00000c84     0x114      4  main.o
+  .text.on_conn_params_evt
+                           Code  00000d98      0x3c      4  main.o
+  .text.conn_params_init   Code  00000dd4      0x78      4  main.o
+  .text.on_ble_evt         Code  00000e4c     0x158      4  main.o
+  .text.buttons_leds_init  Code  00000fa4      0x6c      4  main.o
+  .text.advertising_init   Code  00001010      0x84      4  main.o
+  .text.ble_evt_dispatch   Code  00001094      0x5c      4  main.o
+  .text.application_timers_start
+                           Code  000010f0      0x60      4  main.o
+  .text.nrf_gpio_port_out_read
+                           Code  00001150      0x14      4  boards.o
+  .text.nrf_gpio_port_out_clear
+                           Code  00001164      0x18      4  boards.o
+  .text.nrf_gpio_pin_toggle
+                           Code  0000117c      0x54      4  boards.o
+  .text.bsp_board_led_state_get
+                           Code  000011d0      0x44      4  boards.o
+  .text.bsp_board_button_idx_to_pin
+                           Code  00001214      0x18      4  boards.o
+  .text.bsp_board_led_invert
+                           Code  0000122c      0x20      4  boards.o
+  .text.bsp_board_led_off  Code  0000124c      0x20      4  boards.o
+  .text.bsp_board_led_on   Code  0000126c      0x20      4  boards.o
+  .text.bsp_board_leds_init
+                           Code  0000128c      0x34      4  boards.o
+  .text.bsp_board_button_state_get
+                           Code  000012c0      0x44      4  boards.o
+  .text.bsp_board_pin_to_button_idx
+                           Code  00001304      0x40      4  boards.o
+  .text.bsp_event_to_button_action_assign
+                           Code  00001344      0xb8      4  bsp.o
+  .text.bsp_indication_set
+                           Code  000013fc      0x38      4  bsp.o
+  .text.bsp_init           Code  00001434      0xf4      4  bsp.o
+  .text.leds_timer_handler
+                           Code  00001528      0x28      4  bsp.o
+  .text.bsp_button_event_handler
+                           Code  00001550     0x14c      4  bsp.o
+  .text.bsp_led_indication
+                           Code  0000169c     0x3b4      4  bsp.o
+  .text.nrf_gpio_cfg_sense_set
+                           Code  00001a50      0x64      4  bsp.o
+  .text.bsp_btn_ble_init   Code  00001ab4      0x40      4  bsp_btn_ble.o
+  .text.bsp_btn_ble_on_ble_evt
+                           Code  00001af4      0x8c      4  bsp_btn_ble.o
+  .text.conn_int_check     Code  00001b80      0x78      4  ble_advdata.o
+  .text.set_adv_mode_slow  Code  00001bf8      0x8c      4  ble_advertising.o
+  .text.ble_advertising_on_sys_evt
+                           Code  00001c84      0x5c      4  ble_advertising.o
+  .text.set_adv_mode_fast  Code  00001ce0      0x8c      4  ble_advertising.o
+  .text.adv_mode_next_avail_get
+                           Code  00001d6c      0x8c      4  ble_advertising.o
+  .text.ble_advertising_init
+                           Code  00001df8     0x254      4  ble_advertising.o
+  .text.set_adv_mode_directed
+                           Code  0000204c      0x34      4  ble_advertising.o
+  .text.set_adv_mode_directed_slow
+                           Code  00002080      0x40      4  ble_advertising.o
+  .text.ble_advertising_start
+                           Code  000020c0     0x1c0      4  ble_advertising.o
+  .text.ble_advertising_restart_without_whitelist
+                           Code  00002280      0x6c      4  ble_advertising.o
+  .text.on_connected       Code  000022ec      0x20      4  ble_advertising.o
+  .text.on_disconnected    Code  0000230c      0x4c      4  ble_advertising.o
+  .text.whitelist_has_entries
+                           Code  00002358      0x28      4  ble_advertising.o
+  .text.on_timeout         Code  00002380      0x4c      4  ble_advertising.o
+  .text.ble_conn_params_init
+                           Code  000023cc      0xa0      4  ble_conn_params.o
+  .text.on_write           Code  0000246c      0x68      4  ble_conn_params.o
+  .text.update_timeout_handler
+                           Code  000024d4      0xbc      4  ble_conn_params.o
+  .text.on_connect         Code  00002590      0x40      4  ble_conn_params.o
+  .text.on_disconnect      Code  000025d0      0x50      4  ble_conn_params.o
+  .text.on_conn_params_update
+                           Code  00002620      0x20      4  ble_conn_params.o
+  .text.conn_params_negotiation
+                           Code  00002640      0xb4      4  ble_conn_params.o
+  .text.is_conn_params_ok  Code  000026f4      0x2c      4  ble_conn_params.o
+  .text.record_invalidate  Code  00002720      0x30      4  ble_conn_state.o
+  .text.user_flag_is_acquired
+                           Code  00002750      0x2c      4  ble_conn_state.o
+  .text.ble_conn_state_role
+                           Code  0000277c      0x70      4  ble_conn_state.o
+  .text.record_activate    Code  000027ec      0x84      4  ble_conn_state.o
+  .text.record_purge_disconnected
+                           Code  00002870      0x68      4  ble_conn_state.o
+  .text.ble_conn_state_user_flag_get
+                           Code  000028d8      0x54      4  ble_conn_state.o
+  .text.user_flag_acquire  Code  0000292c      0x2c      4  ble_conn_state.o
+  .text.ble_conn_state_on_ble_evt
+                           Code  00002958      0xc8      4  ble_conn_state.o
+  .text.ble_conn_state_mitm_protected
+                           Code  00002a20      0x30      4  ble_conn_state.o
+  .text.ble_conn_state_encrypted
+                           Code  00002a50      0x30      4  ble_conn_state.o
+  .text.ble_conn_state_conn_handles
+                           Code  00002a80      0x24      4  ble_conn_state.o
+  .text.ble_conn_state_user_flag_collection
+                           Code  00002aa4      0x38      4  ble_conn_state.o
+  .text.record_set_disconnected
+                           Code  00002adc      0x2c      4  ble_conn_state.o
+  .text.ble_conn_state_user_flag_set
+                           Code  00002b08      0x64      4  ble_conn_state.o
+  .text.evt_send           Code  00002b6c      0x30      4  gatt_cache_manager.o
+  .text.internal_state_reset
+                           Code  00002b9c      0x10      4  gatt_cache_manager.o
+  .text.service_changed_send_in_evt
+                           Code  00002bac     0x130      4  gatt_cache_manager.o
+  .text.local_db_update_in_evt
+                           Code  00002cdc     0x130      4  gatt_cache_manager.o
+  .text.cccd_written       Code  00002e0c      0x38      4  gatt_cache_manager.o
+  .text.gcm_local_database_has_changed
+                           Code  00002e44      0x84      4  gatt_cache_manager.o
+  .text.gcm_ble_evt_handler
+                           Code  00002ec8      0x98      4  gatt_cache_manager.o
+  .text.apply_pending_flags_check
+                           Code  00002f60      0x8c      4  gatt_cache_manager.o
+  .text.gcm_im_evt_handler
+                           Code  00002fec      0x44      4  gatt_cache_manager.o
+  .text.service_changed_pending_flags_check
+                           Code  00003030      0xb4      4  gatt_cache_manager.o
+  .text.local_db_apply_in_evt
+                           Code  000030e4     0x114      4  gatt_cache_manager.o
+  .text.gcm_gscm_evt_handler
+                           Code  000031f8      0xa8      4  gatt_cache_manager.o
+  .text.gcm_init           Code  000032a0      0x7c      4  gatt_cache_manager.o
+  .text.update_pending_flags_check
+                           Code  0000331c      0x8c      4  gatt_cache_manager.o
+  .text.gscm_local_db_cache_apply
+                           Code  000033a8     0x110      4  gatts_cache_manager.o
+  .text.gscm_local_database_has_changed
+                           Code  000034b8      0x24      4  gatts_cache_manager.o
+  .text.gscm_pdb_evt_handler
+                           Code  000034dc      0x68      4  gatts_cache_manager.o
+  .text.gscm_service_changed_ind_send
+                           Code  00003544      0x5c      4  gatts_cache_manager.o
+  .text.evt_send           Code  000035a0      0x30      4  gatts_cache_manager.o
+  .text.gscm_init          Code  000035d0      0x18      4  gatts_cache_manager.o
+  .text.service_changed_pending_set
+                           Code  000035e8      0x68      4  gatts_cache_manager.o
+  .text.internal_state_reset
+                           Code  00003650      0x1c      4  gatts_cache_manager.o
+  .text.gscm_local_db_cache_update
+                           Code  0000366c     0x114      4  gatts_cache_manager.o
+  .text.gscm_db_change_notification_done
+                           Code  00003780      0x30      4  gatts_cache_manager.o
+  .text.evt_send           Code  000037b0      0x30      4  id_manager.o
+  .text.im_conn_handle_get
+                           Code  000037e0      0x58      4  id_manager.o
+  .text.internal_state_reset
+                           Code  00003838      0x40      4  id_manager.o
+  .text.im_peer_id_get_by_conn_handle
+                           Code  00003878      0x50      4  id_manager.o
+  .text.im_ble_evt_handler
+                           Code  000038c8     0x120      4  id_manager.o
+  .text.im_peer_id_get_by_master_id
+                           Code  000039e8      0x60      4  id_manager.o
+  .text.peer_id_set        Code  00003a48      0x50      4  id_manager.o
+  .text.im_peer_free       Code  00003a98      0x60      4  id_manager.o
+  .text.im_init            Code  00003af8      0x50      4  id_manager.o
+  .text.get_connection_by_conn_handle
+                           Code  00003b48      0x68      4  id_manager.o
+  .text.new_connection     Code  00003bb0      0xdc      4  id_manager.o
+  .text.get_free_connection
+                           Code  00003c8c      0x58      4  id_manager.o
+  .text.im_ble_addr_get    Code  00003ce4      0x60      4  id_manager.o
+  .text.peer_data_delete   Code  00003d44     0x104      4  peer_data_storage.o
+  .text.file_id_within_pm_range
+                           Code  00003e48      0x40      4  peer_data_storage.o
+  .text.record_key_within_pm_range
+                           Code  00003e88      0x40      4  peer_data_storage.o
+  .text.pds_init           Code  00003ec8      0x4c      4  peer_data_storage.o
+  .text.fds_evt_handler    Code  00003f14     0x1d8      4  peer_data_storage.o
+  .text.peer_data_id_to_record_key
+                           Code  000040ec      0x24      4  peer_data_storage.o
+  .text.pds_peer_id_allocate
+                           Code  00004110      0x14      4  peer_data_storage.o
+  .text.pds_peer_data_iterate_prepare
+                           Code  00004124      0x18      4  peer_data_storage.o
+  .text.pds_evt_send       Code  0000413c      0x2c      4  peer_data_storage.o
+  .text.pds_peer_data_iterate
+                           Code  00004168      0x9c      4  peer_data_storage.o
+  .text.peer_id_to_file_id
+                           Code  00004204      0x24      4  peer_data_storage.o
+  .text.write_buffer_record_find_unused
+                           Code  00004228      0x18      4  peer_database.o
+  .text.pdb_evt_send       Code  00004240      0x30      4  peer_database.o
+  .text.internal_state_reset
+                           Code  00004270      0x34      4  peer_database.o
+  .text.pdb_pds_evt_handler
+                           Code  000042a4     0x264      4  peer_database.o
+  .text.pdb_init           Code  00004508      0x50      4  peer_database.o
+  .text.pdb_write_buf_get  Code  00004558     0x1f0      4  peer_database.o
+  .text.pdb_write_buf_store
+                           Code  00004748     0x188      4  peer_database.o
+  .text.pdb_write_buf_store_prepare
+                           Code  000048d0      0xd4      4  peer_database.o
+  .text.write_buffer_record_release
+                           Code  000049a4      0x44      4  peer_database.o
+  .text.write_buffer_record_find_next
+                           Code  000049e8      0x54      4  peer_database.o
+  .text.claim              Code  00004a3c      0xa0      4  peer_id.o
+  .text.peer_id_init       Code  00004adc      0x34      4  peer_id.o
+  .text.peer_id_allocate   Code  00004b10      0x28      4  peer_id.o
+  .text.peer_id_is_allocated
+                           Code  00004b38      0x38      4  peer_id.o
+  .text.peer_id_is_deleted
+                           Code  00004b70      0x38      4  peer_id.o
+  .text.peer_id_get_next_used
+                           Code  00004ba8      0x80      4  peer_id.o
+  .text.peer_id_delete     Code  00004c28      0x58      4  peer_id.o
+  .text.next_id_get        Code  00004c80      0x70      4  peer_id.o
+  .text.peer_id_get_next_deleted
+                           Code  00004cf0      0x28      4  peer_id.o
+  .text.peer_id_free       Code  00004d18      0x3c      4  peer_id.o
+  .text.pm_sm_evt_handler  Code  00004d54     0x258      4  peer_manager.o
+  .text.evt_send           Code  00004fac      0x3c      4  peer_manager.o
+  .text.pm_pdb_evt_handler
+                           Code  00004fe8     0x268      4  peer_manager.o
+  .text.internal_state_reset
+                           Code  00005250      0x30      4  peer_manager.o
+  .text.pm_sec_params_set  Code  00005280      0x30      4  peer_manager.o
+  .text.pm_register        Code  000052b0      0x50      4  peer_manager.o
+  .text.pm_im_evt_handler  Code  00005300      0x74      4  peer_manager.o
+  .text.pm_on_ble_evt      Code  00005374      0x38      4  peer_manager.o
+  .text.pm_gcm_evt_handler
+                           Code  000053ac      0xe8      4  peer_manager.o
+  .text.pm_init            Code  00005494      0xdc      4  peer_manager.o
+  .text.pm_local_database_has_changed
+                           Code  00005570      0x20      4  peer_manager.o
+  .text.pm_peer_delete     Code  00005590      0x38      4  peer_manager.o
+  .text.pm_peers_delete    Code  000055c8      0x7c      4  peer_manager.o
+  .text.sm_sec_params_set  Code  00005644      0x4c      4  security_manager.o
+  .text.sm_smd_evt_handler
+                           Code  00005690      0xd8      4  security_manager.o
+  .text.sm_conn_sec_config_reply
+                           Code  00005768      0x40      4  security_manager.o
+  .text.smd_params_reply_perform
+                           Code  000057a8      0xf4      4  security_manager.o
+  .text.evt_send           Code  0000589c      0x2c      4  security_manager.o
+  .text.link_secure        Code  000058c8     0x150      4  security_manager.o
+  .text.link_secure_pending_process
+                           Code  00005a18      0xe8      4  security_manager.o
+  .text.sm_ble_evt_handler
+                           Code  00005b00      0x24      4  security_manager.o
+  .text.sm_init            Code  00005b24      0x74      4  security_manager.o
+  .text.sm_pdb_evt_handler
+                           Code  00005b98      0x60      4  security_manager.o
+  .text.flags_set_from_err_code
+                           Code  00005bf8     0x120      4  security_manager.o
+  .text.ble_bas_battery_level_update
+                           Code  00005d18      0xdc      4  ble_bas.o
+  .text.ble_bas_init       Code  00005df4      0x78      4  ble_bas.o
+  .text.battery_level_char_add
+                           Code  00005e6c     0x24c      4  ble_bas.o
+  .text.csc_measurement_char_add
+                           Code  000060b8     0x148      4  ble_cscs.o
+  .text.ble_cscs_init      Code  00006200     0x104      4  ble_cscs.o
+  .text.ble_cscs_measurement_send
+                           Code  00006304      0xa0      4  ble_cscs.o
+  .text.csc_feature_char_add
+                           Code  000063a4     0x10c      4  ble_cscs.o
+  .text.csc_sensor_loc_char_add
+                           Code  000064b0     0x114      4  ble_cscs.o
+  .text.char_add           Code  000065c4     0x124      4  ble_dis.o
+  .text.ble_dis_init       Code  000066e8     0x25c      4  ble_dis.o
+  .text.sc_ctrlpt_resp_send
+                           Code  00006944      0xcc      4  ble_sc_ctrlpt.o
+  .text.ble_sc_ctrlpt_init
+                           Code  00006a10     0x19c      4  ble_sc_ctrlpt.o
+  .text.link_secure_failure
+                           Code  00006bac      0xb4      4  security_dispatcher.o
+  .text.disconnect_process
+                           Code  00006c60      0x38      4  security_dispatcher.o
+  .text.encryption_failure
+                           Code  00006c98      0x74      4  security_dispatcher.o
+  .text.conn_sec_update_process
+                           Code  00006d0c      0x8c      4  security_dispatcher.o
+  .text.sec_proc_start     Code  00006d98      0xb8      4  security_dispatcher.o
+  .text.sec_info_request_process
+                           Code  00006e50     0x134      4  security_dispatcher.o
+  .text.auth_status_success_process
+                           Code  00006f84     0x124      4  security_dispatcher.o
+  .text.evt_send           Code  000070a8      0x30      4  security_dispatcher.o
+  .text.pairing_failure    Code  000070d8      0xe8      4  security_dispatcher.o
+  .text.smd_link_secure    Code  000071c0      0x74      4  security_dispatcher.o
+  .text.smd_init           Code  00007234      0x54      4  security_dispatcher.o
+  .text.smd_ble_evt_handler
+                           Code  00007288      0x6c      4  security_dispatcher.o
+  .text.smd_params_reply   Code  000072f4     0x224      4  security_dispatcher.o
+  .text.link_secure_central
+                           Code  00007518     0x10c      4  security_dispatcher.o
+  .text.link_secure_central_new_peer
+                           Code  00007624      0xdc      4  security_dispatcher.o
+  .text.nrf_gpiote_event_polarity_get
+                           Code  00007700      0x24      4  nrf_drv_gpiote.o
+  .text.nrf_gpio_cfg_sense_set
+                           Code  00007724      0x64      4  nrf_drv_gpiote.o
+  .text.nrf_gpiote_event_pin_get
+                           Code  00007788      0x20      4  nrf_drv_gpiote.o
+  .text.channel_port_alloc
+                           Code  000077a8      0x88      4  nrf_drv_gpiote.o
+  .text.pin_in_use_by_te_set
+                           Code  00007830      0x5c      4  nrf_drv_gpiote.o
+  .text.nrf_drv_gpiote_is_init
+                           Code  0000788c      0x14      4  nrf_drv_gpiote.o
+  .text.pin_in_use_clear   Code  000078a0      0x1c      4  nrf_drv_gpiote.o
+  .text.nrf_drv_gpiote_init
+                           Code  000078bc      0xa8      4  nrf_drv_gpiote.o
+  .text.channel_handler_get
+                           Code  00007964      0x18      4  nrf_drv_gpiote.o
+  .text.channel_free       Code  0000797c      0x44      4  nrf_drv_gpiote.o
+  .text.pin_in_use_by_port
+                           Code  000079c0      0x28      4  nrf_drv_gpiote.o
+  .text.pin_in_use_by_gpiote
+                           Code  000079e8      0x24      4  nrf_drv_gpiote.o
+  .text.pin_in_use_by_te   Code  00007a0c      0x40      4  nrf_drv_gpiote.o
+  .text.channel_port_get   Code  00007a4c      0x1c      4  nrf_drv_gpiote.o
+  .text.nrf_drv_gpiote_in_init
+                           Code  00007a68      0xcc      4  nrf_drv_gpiote.o
+  .text.nrf_drv_gpiote_in_event_enable
+                           Code  00007b34     0x10c      4  nrf_drv_gpiote.o
+  .text.nrf_uart_txd_set   Code  00007c40      0x24      4  nrf_drv_uart.o
+  .text.GPIOTE_IRQHandler  Code  00007c64     0x348      4  nrf_drv_gpiote.o
+  .text.UART0_IRQHandler   Code  00007fac      0x1c      4  nrf_drv_uart.o
+  .text.app_button_enable  Code  00007fc8      0x40      4  app_button.o
+  .text.detection_delay_timeout_handler
+                           Code  00008008      0xe0      4  app_button.o
+  .text.gpiote_event_handler
+                           Code  000080e8      0xa4      4  app_button.o
+  .text.app_button_init    Code  0000818c      0xf4      4  app_button.o
+  .text.app_error_handler_bare
+                           Code  00008280      0x30      4  app_error.o
+  .text.NVIC_EnableIRQ     Code  000082b0      0x2c      4  app_timer.o
+  .text.NVIC_DisableIRQ    Code  000082dc      0x2c      4  app_timer.o
+  .text.NVIC_SystemReset   Code  00008308      0x1c      4  app_error_weak.o
+  .text.NVIC_SetPendingIRQ
+                           Code  00008324      0x2c      4  app_timer.o
+  .text.NVIC_ClearPendingIRQ
+                           Code  00008350      0x2c      4  app_timer.o
+  .text.NVIC_SetPriority   Code  0000837c      0xec      4  app_timer.o
+  .text.nrf_drv_common_irq_enable_check
+                           Code  00008468      0x40      4  nrf_drv_clock.o
+  .text.POWER_CLOCK_IRQHandler
+                           Code  000084a8      0x60      4  nrf_drv_clock.o
+  .text.nrf_drv_clock_init
+                           Code  00008508      0x5c      4  nrf_drv_clock.o
+  .text.nrf_drv_clock_on_sd_enable
+                           Code  00008564      0x50      4  nrf_drv_clock.o
+  .text.clock_clk_started_notify
+                           Code  000085b4      0x54      4  nrf_drv_clock.o
+  .text.NVIC_SetPriority   Code  00008608      0xec      4  nrf_drv_common.o
+  .text.NVIC_ClearPendingIRQ
+                           Code  000086f4      0x2c      4  nrf_drv_common.o
+  .text.NVIC_EnableIRQ     Code  00008720      0x2c      4  nrf_drv_common.o
+  .text.nrf_gpiote_event_addr_get
+                           Code  0000874c      0x20      4  nrf_drv_gpiote.o
+  .text.nrf_gpiote_int_enable
+                           Code  0000876c      0x18      4  nrf_drv_gpiote.o
+  .text.nrf_gpiote_int_is_enabled
+                           Code  00008784      0x1c      4  nrf_drv_gpiote.o
+  .text.nrf_gpiote_event_enable
+                           Code  000087a0      0x2c      4  nrf_drv_gpiote.o
+  .text.nrf_gpiote_event_configure
+                           Code  000087cc      0x6c      4  nrf_drv_gpiote.o
+  .text.fds_record_open    Code  00008838      0x78      4  fds.o
+  .text.fds_record_close   Code  000088b0      0x80      4  fds.o
+  .text.fds_gc             Code  00008930      0x54      4  fds.o
+  .text.fds_reserve_cancel
+                           Code  00008984      0x84      4  fds.o
+  .text.fds_file_delete    Code  00008a08      0x70      4  fds.o
+  .text.fds_init           Code  00008a78      0xd4      4  fds.o
+  .text.check_config       Code  00008b4c      0x30      4  fstorage.o
+  .text.queue_advance      Code  00008b7c      0x44      4  fstorage.o
+  .text.queue_start        Code  00008bc0      0x34      4  fstorage.o
+  .text.queue_process      Code  00008bf4      0x90      4  fstorage.o
+  .text.fs_flash_page_end_addr
+                           Code  00008c84      0x24      4  fstorage.o
+  .text.on_operation_success
+                           Code  00008ca8      0xb8      4  fstorage.o
+  .text.fs_sys_event_handler
+                           Code  00008d60      0x88      4  fstorage.o
+  .text.on_operation_failure
+                           Code  00008de8      0x38      4  fstorage.o
+  .text.queue_get_next_free
+                           Code  00008e20      0x7c      4  fstorage.o
+  .text.fs_init            Code  00008e9c     0x130      4  fstorage.o
+  .text.fs_erase           Code  00008fcc      0xd0      4  fstorage.o
+  .text.fs_queued_op_count_get
+                           Code  0000909c      0x24      4  fstorage.o
+  .text.fs_store           Code  000090c0      0xe4      4  fstorage.o
+  .text.sdk_mapped_flags_first_key_index_get
+                           Code  000091a4      0x5c      4  sdk_mapped_flags.o
+  .text.rtc1_counter_get   Code  00009200      0x14      4  app_timer.o
+  .text.rtc1_compare0_set  Code  00009214      0x18      4  app_timer.o
+  .text.timer_list_insert  Code  0000922c      0xac      4  app_timer.o
+  .text.timer_list_remove  Code  000092d8      0x9c      4  app_timer.o
+  .text.rtc1_init          Code  00009374      0x24      4  app_timer.o
+  .text.rtc1_start         Code  00009398      0x44      4  app_timer.o
+  .text.rtc1_stop          Code  000093dc      0x54      4  app_timer.o
+  .text.nrf_delay_us       Code  00009430      0x40      4  app_timer.o
+  .text.app_timer_create   Code  00009470      0x64      4  app_timer.o
+  .text.app_timer_start    Code  000094d4      0x64      4  app_timer.o
+  .text.RTC1_IRQHandler    Code  00009538      0x4c      4  app_timer.o
+  .text.app_timer_stop     Code  00009584      0x44      4  app_timer.o
+  .text.compare_reg_update
+                           Code  000095c8      0xc0      4  app_timer.o
+  .text.list_deletions_handler
+                           Code  00009688      0xb4      4  app_timer.o
+  .text.user_op_enque      Code  0000973c      0x20      4  app_timer.o
+  .text.elapsed_ticks_acquire
+                           Code  0000975c      0x78      4  app_timer.o
+  .text.expired_timers_handler
+                           Code  000097d4      0x94      4  app_timer.o
+  .text.app_timer_init     Code  00009868      0xb4      4  app_timer.o
+  .text.list_insertions_handler
+                           Code  0000991c     0x15c      4  app_timer.o
+  .text.user_op_alloc      Code  00009a78      0x64      4  app_timer.o
+  .text.timeout_handler_exec
+                           Code  00009adc      0x4c      4  app_timer.o
+  .text.timer_timeouts_check
+                           Code  00009b28      0xc8      4  app_timer.o
+  .text.timer_list_handler
+                           Code  00009bf0      0x8c      4  app_timer.o
+  .text.sd_nvic_critical_region_enter
+                           Code  00009c7c      0x60      4  app_util_platform.o
+  .text.sd_nvic_critical_region_exit
+                           Code  00009cdc      0x50      4  app_util_platform.o
+  .text.flag_set           Code  00009d2c      0x28      4  fds.o
+  .text.flag_clear         Code  00009d54      0x30      4  fds.o
+  .text.flag_is_set        Code  00009d84      0x28      4  fds.o
+  .text.event_prepare      Code  00009dac      0xbc      4  fds.o
+  .text.header_is_valid    Code  00009e68      0x30      4  fds.o
+  .text.address_is_valid   Code  00009e98      0x44      4  fds.o
+  .text.event_send         Code  00009edc      0x3c      4  fds.o
+  .text.page_tag_write_data
+                           Code  00009f18      0x28      4  fds.o
+  .text.gc_init            Code  00009f40      0x6c      4  fds.o
+  .text.gc_page_erase      Code  00009fac      0x64      4  fds.o
+  .text.record_header_flag_dirty
+                           Code  0000a010      0x3c      4  fds.o
+  .text.gc_record_copy     Code  0000a04c      0x58      4  fds.o
+  .text.queue_advance      Code  0000a0a4      0x50      4  fds.o
+  .text.page_from_record   Code  0000a0f4      0x7c      4  fds.o
+  .text.page_has_space     Code  0000a170      0x5c      4  fds.o
+  .text.page_scan          Code  0000a1cc      0xb0      4  fds.o
+  .text.write_space_free   Code  0000a27c      0x48      4  fds.o
+  .text.record_id_new      Code  0000a2c4      0x18      4  fds.o
+  .text.record_find        Code  0000a2dc      0xd0      4  fds.o
+  .text.chunk_queue_next   Code  0000a3ac      0x30      4  fds.o
+  .text.record_find_by_desc
+                           Code  0000a3dc      0xac      4  fds.o
+  .text.chunk_queue_skip   Code  0000a488      0x3c      4  fds.o
+  .text.record_header_write_id
+                           Code  0000a4c4      0x4c      4  fds.o
+  .text.record_header_write_begin
+                           Code  0000a510      0x3c      4  fds.o
+  .text.record_find_and_delete
+                           Code  0000a54c      0x78      4  fds.o
+  .text.gc_page_next       Code  0000a5c4      0x8c      4  fds.o
+  .text.write_space_reserve
+                           Code  0000a650      0xc4      4  fds.o
+  .text.page_tag_write_swap
+                           Code  0000a714      0x2c      4  fds.o
+  .text.op_enqueue         Code  0000a740      0xd0      4  fds.o
+  .text.pages_init         Code  0000a810     0x200      4  fds.o
+  .text.record_header_write_finalize
+                           Code  0000aa10      0x4c      4  fds.o
+  .text.record_find_next   Code  0000aa5c      0xa0      4  fds.o
+  .text.file_find_and_delete
+                           Code  0000aafc      0x5c      4  fds.o
+  .text.page_identify      Code  0000ab58      0x40      4  fds.o
+  .text.record_write_chunk
+                           Code  0000ab98      0x78      4  fds.o
+  .text.gc_swap_erase      Code  0000ac10      0x30      4  fds.o
+  .text.chunk_queue_get_and_advance
+                           Code  0000ac40      0x3c      4  fds.o
+  .text.queue_process      Code  0000ac7c      0xec      4  fds.o
+  .text.gc_swap_pages      Code  0000ad68      0x58      4  fds.o
+  .text.gc_tag_new_swap    Code  0000adc0      0x1c      4  fds.o
+  .text.gc_record_find_next
+                           Code  0000addc      0x38      4  fds.o
+  .text.delete_execute     Code  0000ae14      0x68      4  fds.o
+  .text.gc_update_swap_offset
+                           Code  0000ae7c      0x34      4  fds.o
+  .text.write_enqueue      Code  0000aeb0     0x1c8      4  fds.o
+  .text.fds_register       Code  0000b078      0x40      4  fds.o
+  .text.init_execute       Code  0000b0b8     0x188      4  fds.o
+  .text.write_execute      Code  0000b240     0x110      4  fds.o
+  .text.gc_next_page       Code  0000b350      0x44      4  fds.o
+  .text.gc_execute         Code  0000b394      0x88      4  fds.o
+  .text.gc_swap_promote    Code  0000b41c      0x2c      4  fds.o
+  .text.gc_state_advance   Code  0000b448      0x58      4  fds.o
+  .text.NVIC_EnableIRQ     Code  0000b4a0      0x2c      4  softdevice_handler.o
+  .text.NVIC_DisableIRQ    Code  0000b4cc      0x2c      4  softdevice_handler.o
+  .text.NVIC_GetPriority   Code  0000b4f8      0x84      4  softdevice_handler.o
+  .text.sd_nvic_EnableIRQ  Code  0000b57c      0xa4      4  softdevice_handler.o
+  .text.__sd_nvic_app_accessible_irq
+                           Code  0000b620      0x3c      4  softdevice_handler.o
+  .text.nrf_drv_common_irq_enable_check
+                           Code  0000b65c      0x40      4  softdevice_handler.o
+  .text.softdevice_handler_is_enabled
+                           Code  0000b69c      0x10      4  softdevice_handler.o
+  .text.softdevice_ble_evt_handler_set
+                           Code  0000b6ac      0x20      4  softdevice_handler.o
+  .text.softdevice_enable  Code  0000b6cc      0x2c      4  softdevice_handler.o
+  .text.intern_softdevice_events_execute
+                           Code  0000b6f8     0x130      4  softdevice_handler.o
+  .text.softdevice_handler_init
+                           Code  0000b828      0xc0      4  softdevice_handler.o
+  .text.softdevice_sys_evt_handler_set
+                           Code  0000b8e8      0x20      4  softdevice_handler.o
+  .text.SWI2_IRQHandler    Code  0000b908      0x38      4  softdevice_handler.o
+  .rodata                  Cnst  0000b940      0x24      4  main.o
+  .rodata                  Cnst  0000b964      0x10      4  gatts_cache_manager.o
+  .rodata.m_battery_timer_id
+                           Cnst  0000b974       0x4      4  main.o
+  .rodata.m_csc_meas_timer_id
+                           Cnst  0000b978       0x4      4  main.o
+  .rodata.pm_evt_handler   Cnst  0000b97c      0x3c      4  main.o
+  .rodata.m_board_led_list
+                           Cnst  0000b9b8       0x4      4  boards.o
+  .rodata.m_board_btn_list
+                           Cnst  0000b9bc       0x4      4  boards.o
+  .rodata.bsp_led_indication
+                           Cnst  0000b9c0      0x60      4  bsp.o
+  .rodata.m_leds_timer_id  Cnst  0000ba20       0x4      4  bsp.o
+  .rodata.m_alert_timer_id
+                           Cnst  0000ba24       0x4      4  bsp.o
+  .rodata.m_button_timer_id
+                           Cnst  0000ba28       0x4      4  bsp.o
+  .rodata.app_buttons      Cnst  0000ba2c      0x20      4  bsp.o
+  .rodata.ble_advertising_start
+                           Cnst  0000ba4c      0x14      4  ble_advertising.o
+  .rodata.m_conn_params_timer_id
+                           Cnst  0000ba60       0x4      4  ble_conn_params.o
+  .rodata.service_changed_pending.6787
+                           Cnst  0000ba64       0x4      4  gatts_cache_manager.o
+  .rodata.service_changed_pending.6850
+                           Cnst  0000ba68       0x4      4  gatts_cache_manager.o
+  .rodata.m_evt_handlers   Cnst  0000ba6c       0x8      4  id_manager.o
+  .rodata.fds_evt_handler  Cnst  0000ba74      0x18      4  peer_data_storage.o
+  .rodata.m_evt_handlers   Cnst  0000ba8c      0x14      4  peer_database.o
+  .rodata.pdb_pds_evt_handler
+                           Cnst  0000baa0      0x28      4  peer_database.o
+  .rodata.pm_pdb_evt_handler
+                           Cnst  0000bac8      0x28      4  peer_manager.o
+  .rodata.pm_sm_evt_handler
+                           Cnst  0000baf0      0x34      4  peer_manager.o
+  .rodata.pm_gcm_evt_handler
+                           Cnst  0000bb24      0x28      4  peer_manager.o
+  .rodata.sm_pdb_evt_handler
+                           Cnst  0000bb4c      0x28      4  security_manager.o
+  .rodata.m_evt_handlers   Cnst  0000bb74       0x8      4  security_dispatcher.o
+  .rodata.smd_ble_evt_handler
+                           Cnst  0000bb7c      0x38      4  security_dispatcher.o
+  .rodata.m_detection_delay_timer_id
+                           Cnst  0000bbb4       0x4      4  app_button.o
+  .rodata.page_tag_swap.5909
+                           Cnst  0000bbb8       0x8      4  fds.o
+  .rodata.page_tag_data.5913
+                           Cnst  0000bbc0       0x8      4  fds.o
+  .rodata.fds_init         Cnst  0000bbc8      0x30      4  fds.o
+  .rodata.m_fds_tl_dirty   Cnst  0000bbf8       0x4      4  fds.o
+  .rodata.event_prepare    Cnst  0000bbfc      0x1c      4  fds.o
+  .rodata.gc_state_advance
+                           Cnst  0000bc18      0x20      4  fds.o
+  .rodata.write_execute    Cnst  0000bc38      0x1c      4  fds.o
+  .rodata.queue_process    Cnst  0000bc54      0x1c      4  fds.o
+  .rodata.gc_execute       Cnst  0000bc70      0x20      4  fds.o
+  .text.advertising_start  Code  0000bc90      0x26      2  main.o
+  .text.main               Code  0000bcb6      0x72      2  main.o
+  .text.sleep_mode_enter   Code  0000bd28      0x5a      2  main.o
+  .text.nrf_gpio_cfg       Code  0000bd82      0x6e      2  boards.o
+  .text.nrf_gpio_pin_write
+                           Code  0000bdf0      0x26      2  boards.o
+  .text.nrf_gpio_pin_port_decode
+                           Code  0000be16       0xe      2  boards.o
+  .text.nrf_gpio_port_in_read
+                           Code  0000be24      0x12      2  boards.o
+  .text.nrf_gpio_port_out_set
+                           Code  0000be36      0x16      2  boards.o
+  .text.bsp_button_is_pressed
+                           Code  0000be4c      0x16      2  bsp.o
+  .text.alert_timer_handler
+                           Code  0000be62      0x12      2  bsp.o
+  .text.nrf_gpio_pin_port_decode
+                           Code  0000be74       0xe      2  bsp.o
+  .text.connection_buttons_configure
+                           Code  0000be82      0x66      2  bsp_btn_ble.o
+  .text.startup_event_extract
+                           Code  0000bee8      0x36      2  bsp_btn_ble.o
+  .text.advertising_buttons_configure
+                           Code  0000bf1e      0x66      2  bsp_btn_ble.o
+  .text.uuid_list_sized_encode
+                           Code  0000bf84     0x182      2  ble_advdata.o
+  .text.ble_device_addr_encode
+                           Code  0000c106      0xca      2  ble_advdata.o
+  .text.flags_encode       Code  0000c1d0      0x82      2  ble_advdata.o
+  .text.uint16_encode      Code  0000c252      0x32      2  ble_advdata.o
+  .text.tx_power_level_encode
+                           Code  0000c284      0x82      2  ble_advdata.o
+  .text.flash_access_in_progress
+                           Code  0000c306      0x1a      2  ble_advertising.o
+  .text.adv_mode_next_get  Code  0000c320      0x26      2  ble_advertising.o
+  .text.addr_is_valid      Code  0000c346      0x2e      2  ble_advertising.o
+  .text.ble_conn_params_on_ble_evt
+                           Code  0000c374      0x4e      2  ble_conn_params.o
+  .text.gcm_smd_evt_handler
+                           Code  0000c3c2      0x22      2  gatt_cache_manager.o
+  .text.gscm_service_changed_ind_needed
+                           Code  0000c3e4      0x4a      2  gatts_cache_manager.o
+  .text.im_new_peer_id     Code  0000c42e      0x2a      2  id_manager.o
+  .text.addr_compare       Code  0000c458      0x46      2  id_manager.o
+  .text.im_is_duplicate_bonding_data
+                           Code  0000c49e      0x82      2  id_manager.o
+  .text.is_valid_irk       Code  0000c520      0x2e      2  id_manager.o
+  .text.im_address_resolve
+                           Code  0000c54e      0x56      2  id_manager.o
+  .text.peer_data_find     Code  0000c5a4      0x7e      2  peer_data_storage.o
+  .text.pds_peer_data_read
+                           Code  0000c622      0xda      2  peer_data_storage.o
+  .text.pds_peer_id_free   Code  0000c6fc      0x32      2  peer_data_storage.o
+  .text.peer_ids_load      Code  0000c72e      0x6a      2  peer_data_storage.o
+  .text.pds_peer_data_store
+                           Code  0000c798     0x11a      2  peer_data_storage.o
+  .text.peer_data_id_is_valid
+                           Code  0000c8b2      0x5a      2  peer_data_storage.o
+  .text.write_buffer_record_invalidate
+                           Code  0000c90c      0x4e      2  peer_database.o
+  .text.write_buffer_record_get
+                           Code  0000c95a      0x56      2  peer_database.o
+  .text.pdb_raw_store      Code  0000c9b0      0x2a      2  peer_database.o
+  .text.write_buf_length_words_set
+                           Code  0000c9da      0x4e      2  peer_database.o
+  .text.pdb_peer_data_ptr_get
+                           Code  0000ca28      0x32      2  peer_database.o
+  .text.pdb_write_buf_release
+                           Code  0000ca5a      0x6a      2  peer_database.o
+  .text.release            Code  0000cac4      0x2e      2  peer_id.o
+  .text.pm_buffer_ptr_get  Code  0000caf2      0x66      2  pm_buffer.o
+  .text.pm_mutex_unlock    Code  0000cb58      0xa2      2  pm_mutex.o
+  .text.lock_by_mask       Code  0000cbfa      0x7e      2  pm_mutex.o
+  .text.pm_buffer_init     Code  0000cc78      0x76      2  pm_buffer.o
+  .text.sec_params_verify  Code  0000ccee     0x172      2  security_manager.o
+  .text.send_config_req    Code  0000ce60      0x36      2  security_manager.o
+  .text.params_reply_pending_process
+                           Code  0000ce96      0x92      2  security_manager.o
+  .text.ble_bas_on_ble_evt
+                           Code  0000cf28      0x56      2  ble_bas.o
+  .text.uint16_encode      Code  0000cf7e      0x32      2  ble_cscs.o
+  .text.on_meas_cccd_write
+                           Code  0000cfb0      0x46      2  ble_cscs.o
+  .text.uint32_encode      Code  0000cff6      0x3a      2  ble_cscs.o
+  .text.uint16_encode      Code  0000d030      0x32      2  ble_dis.o
+  .text.pnp_id_encode      Code  0000d062      0xea      2  ble_dis.o
+  .text.uint32_decode      Code  0000d14c      0x2e      2  ble_sc_ctrlpt.o
+  .text.ctrlpt_rsp_encode  Code  0000d17a      0x8e      2  ble_sc_ctrlpt.o
+  .text.on_sc_hvc_confirm  Code  0000d208      0x2a      2  ble_sc_ctrlpt.o
+  .text.on_rw_authorize_request
+                           Code  0000d232      0x4e      2  ble_sc_ctrlpt.o
+  .text.on_ctrlpt_write    Code  0000d280     0x2c6      2  ble_sc_ctrlpt.o
+  .text.sc_ctrlpt_decode   Code  0000d546      0x82      2  ble_sc_ctrlpt.o
+  .text.on_tx_complete     Code  0000d5c8      0x1e      2  ble_sc_ctrlpt.o
+  .text.smd_pdb_evt_handler
+                           Code  0000d5e6      0x52      2  security_dispatcher.o
+  .text.auth_status_failure_process
+                           Code  0000d638      0x26      2  security_dispatcher.o
+  .text.sec_params_request_process
+                           Code  0000d65e      0x2a      2  security_dispatcher.o
+  .text.sec_start_send     Code  0000d688      0x4a      2  security_dispatcher.o
+  .text.link_secure_peripheral
+                           Code  0000d6d2      0x2a      2  security_dispatcher.o
+  .text.nrf_gpio_cfg       Code  0000d6fc      0x6e      2  nrf_drv_gpiote.o
+  .text.nrf_gpio_pin_port_decode
+                           Code  0000d76a       0xe      2  nrf_drv_gpiote.o
+  .text.nrf_gpio_ports_read
+                           Code  0000d778      0x4e      2  nrf_drv_gpiote.o
+  .text.nrf_gpio_port_in_read
+                           Code  0000d7c6      0x12      2  nrf_drv_gpiote.o
+  .text.nrf_gpio_cfg_input
+                           Code  0000d7d8      0x2e      2  nrf_drv_gpiote.o
+  .text.nrf_uart_int_disable
+                           Code  0000d806      0x16      2  nrf_drv_uart.o
+  .text.nrf_uart_int_enable_check
+                           Code  0000d81c      0x1e      2  nrf_drv_uart.o
+  .text.uart_irq_handler   Code  0000d83a     0x20a      2  nrf_drv_uart.o
+  .text.tx_byte            Code  0000da44      0x4e      2  nrf_drv_uart.o
+  .text.rx_done_event      Code  0000da92      0x3a      2  nrf_drv_uart.o
+  .text.is_word_aligned    Code  0000dacc      0x16      2  app_timer.o
+  .text.nrf_clock_event_check
+                           Code  0000dae2      0x26      2  nrf_drv_clock.o
+  .text.nrf_clock_int_disable
+                           Code  0000db08      0x16      2  nrf_drv_clock.o
+  .text.nrf_drv_common_power_clock_irq_init
+                           Code  0000db1e      0x22      2  nrf_drv_clock.o
+  .text.nrf_clock_event_clear
+                           Code  0000db40      0x22      2  nrf_drv_clock.o
+  .text.nrf_gpiote_event_is_set
+                           Code  0000db62      0x2a      2  nrf_drv_gpiote.o
+  .text.fds_record_find_by_key
+                           Code  0000db8c      0x26      2  fds.o
+  .text.fds_record_id_from_desc
+                           Code  0000dbb2      0x26      2  fds.o
+  .text.fds_record_update  Code  0000dbd8      0x26      2  fds.o
+  .text.fds_record_find_in_file
+                           Code  0000dbfe      0x26      2  fds.o
+  .text.store_execute      Code  0000dc24      0x5e      2  fstorage.o
+  .text.sdk_mapped_flags_get_by_index
+                           Code  0000dc82      0x2e      2  sdk_mapped_flags.o
+  .text.sensorsim_init     Code  0000dcb0      0x32      2  sensorsim.o
+  .text.sdk_mapped_flags_bulk_update_by_key
+                           Code  0000dce2      0x92      2  sdk_mapped_flags.o
+  .text.ticks_diff_get     Code  0000dd74      0x16      2  app_timer.o
+  .text.timer_start_op_schedule
+                           Code  0000dd8a      0x8e      2  app_timer.o
+  .text.SWI0_IRQHandler    Code  0000de18       0xa      2  app_timer.o
+  .text.__sd_nvic_irq_enable
+                           Code  0000de22       0x6      2  app_util_platform.o
+  .text.__sd_nvic_irq_disable
+                           Code  0000de28      0x16      2  app_util_platform.o
+  .text.app_util_critical_region_exit
+                           Code  0000de3e      0x1e      2  app_util_platform.o
+  .text.is_word_aligned    Code  0000de5c      0x16      2  fds.o
+  .text.chunk_is_aligned   Code  0000de72      0x46      2  fds.o
+  .text.page_offsets_update
+                           Code  0000deb8      0x3e      2  fds.o
+  .text.queue_start        Code  0000def6      0x26      2  fds.o
+  .text.is_word_aligned    Code  0000df1c      0x16      2  softdevice_handler.o
+  .text.__sd_nvic_is_app_accessible_priority
+                           Code  0000df32      0x26      2  softdevice_handler.o
+  .text.softdevice_enable_get_default_config
+                           Code  0000df58      0x62      2  softdevice_handler.o
+  .text.libc.memcpy        Code  0000dfba      0x16      2  libc2_asm.o (libc_v6m_t_le_eabi.a)
+  .text.libc.strlen        Code  0000dfd0       0xe      2  libc2_asm.o (libc_v6m_t_le_eabi.a)
+  .text.libc.memset        Code  0000dfde      0x12      2  libc2_asm.o (libc_v6m_t_le_eabi.a)
+  .text.libc.__aeabi_uidivmod
+                           Code  0000dff0      0x2a      2  libc_asm.o (libc_v6m_t_le_eabi.a)
+  .text.sd_ble_gap_appearance_set
+                           Code  0000e01a       0x8      2  main.o
+  .text.sd_ble_gap_disconnect
+                           Code  0000e022       0x8      2  main.o
+  .text.sd_ble_gap_ppcp_set
+                           Code  0000e02a       0x8      2  main.o
+  .text.sd_ble_gap_device_name_set
+                           Code  0000e032       0x8      2  main.o
+  .text.sd_ble_gatts_rw_authorize_reply
+                           Code  0000e03a       0x8      2  main.o
+  .text.sd_app_evt_wait    Code  0000e042       0x8      2  main.o
+  .text.sd_ble_user_mem_reply
+                           Code  0000e04a       0x8      2  main.o
+  .text.sd_power_system_off
+                           Code  0000e052       0x8      2  main.o
+  .text.battery_level_meas_timeout_handler
+                           Code  0000e05a      0x10      2  main.o
+  .text.sys_evt_dispatch   Code  0000e06a      0x1c      2  main.o
+  .text.conn_params_error_handler
+                           Code  0000e086      0x14      2  main.o
+  .text.power_manage       Code  0000e09a      0x24      2  main.o
+  .text.on_adv_evt         Code  0000e0be      0x48      2  main.o
+  .text.nrf_gpio_pin_set   Code  0000e106      0x28      2  boards.o
+  .text.nrf_gpio_pin_clear
+                           Code  0000e12e      0x28      2  boards.o
+  .text.nrf_gpio_cfg_output
+                           Code  0000e156      0x20      2  boards.o
+  .text.nrf_gpio_pin_read  Code  0000e176      0x2c      2  boards.o
+  .text.nrf_gpio_pin_out_read
+                           Code  0000e1a2      0x2c      2  boards.o
+  .text.bsp_board_leds_off
+                           Code  0000e1ce      0x24      2  boards.o
+  .text.bsp_board_leds_on  Code  0000e1f2      0x24      2  boards.o
+  .text.button_timer_handler
+                           Code  0000e216      0x18      2  bsp.o
+  .text.bsp_wakeup_button_enable
+                           Code  0000e22e      0x20      2  bsp.o
+  .text.bsp_btn_ble_sleep_mode_prepare
+                           Code  0000e24e      0x40      2  bsp_btn_ble.o
+  .text.sd_ble_gap_appearance_get
+                           Code  0000e28e       0x8      2  ble_advdata.o
+  .text.sd_ble_gap_device_name_get
+                           Code  0000e296       0x8      2  ble_advdata.o
+  .text.sd_ble_gap_adv_data_set
+                           Code  0000e29e       0x8      2  ble_advdata.o
+  .text.sd_ble_gap_address_get
+                           Code  0000e2a6       0x8      2  ble_advdata.o
+  .text.conn_int_encode    Code  0000e2ae      0xc8      2  ble_advdata.o
+  .text.ble_advdata_set    Code  0000e376      0xc4      2  ble_advdata.o
+  .text.manuf_specific_data_encode
+                           Code  0000e43a      0xe4      2  ble_advdata.o
+  .text.sd_ble_gap_adv_start
+                           Code  0000e51e       0x8      2  ble_advertising.o
+  .text.service_data_encode
+                           Code  0000e526     0x114      2  ble_advdata.o
+  .text.srdata_check       Code  0000e63a      0x18      2  ble_advdata.o
+  .text.adv_data_encode    Code  0000e652     0x204      2  ble_advdata.o
+  .text.sd_ble_gap_adv_stop
+                           Code  0000e856       0x8      2  ble_advertising.o
+  .text.advdata_check      Code  0000e85e      0x1c      2  ble_advdata.o
+  .text.sd_ble_uuid_encode
+                           Code  0000e87a       0x8      2  ble_advdata.o
+  .text.name_encode        Code  0000e882     0x15c      2  ble_advdata.o
+  .text.appearance_encode  Code  0000e9de      0xa0      2  ble_advdata.o
+  .text.uuid_list_encode   Code  0000ea7e      0x78      2  ble_advdata.o
+  .text.ble_advertising_on_ble_evt
+                           Code  0000eaf6      0x3c      2  ble_advertising.o
+  .text.sd_ble_gap_conn_param_update
+                           Code  0000eb32       0x8      2  ble_conn_params.o
+  .text.sd_ble_gap_disconnect
+                           Code  0000eb3a       0x8      2  ble_conn_params.o
+  .text.sd_ble_gap_ppcp_set
+                           Code  0000eb42       0x8      2  ble_conn_params.o
+  .text.sd_ble_gap_ppcp_get
+                           Code  0000eb4a       0x8      2  ble_conn_params.o
+  .text.ble_conn_state_user_flag_acquire
+                           Code  0000eb52      0x5c      2  ble_conn_state.o
+  .text.uint16_decode      Code  0000ebae      0x20      2  ble_srv_common.o
+  .text.ble_srv_report_ref_encode
+                           Code  0000ebce      0x6c      2  ble_srv_common.o
+  .text.ble_srv_ascii_to_utf8
+                           Code  0000ec3a      0x24      2  ble_srv_common.o
+  .text.ble_srv_is_notification_enabled
+                           Code  0000ec5e      0x2c      2  ble_srv_common.o
+  .text.ble_srv_is_indication_enabled
+                           Code  0000ec8a      0x2c      2  ble_srv_common.o
+  .text.sdk_mapped_flags_any_set
+                           Code  0000ecb6      0x1c      2  gatt_cache_manager.o
+  .text.sd_ble_gatts_sys_attr_get
+                           Code  0000ecd2       0x8      2  gatts_cache_manager.o
+  .text.sd_ble_gatts_sys_attr_set
+                           Code  0000ecda       0x8      2  gatts_cache_manager.o
+  .text.sd_ble_gatts_service_changed
+                           Code  0000ece2       0x8      2  gatts_cache_manager.o
+  .text.sd_ble_gap_address_get
+                           Code  0000ecea       0x8      2  id_manager.o
+  .text.im_master_id_is_valid
+                           Code  0000ecf2      0x3c      2  id_manager.o
+  .text.im_pdb_evt_handler
+                           Code  0000ed2e      0xac      2  id_manager.o
+  .text.im_master_ids_compare
+                           Code  0000edda      0x50      2  id_manager.o
+  .text.sd_ecb_block_encrypt
+                           Code  0000ee2a       0x8      2  id_manager.o
+  .text.ah                 Code  0000ee32      0xa0      2  id_manager.o
+  .text.pds_peer_id_is_allocated
+                           Code  0000eed2      0x20      2  peer_data_storage.o
+  .text.record_key_to_peer_data_id
+                           Code  0000eef2      0x18      2  peer_data_storage.o
+  .text.pds_next_peer_id_get
+                           Code  0000ef0a      0x20      2  peer_data_storage.o
+  .text.pds_next_deleted_peer_id_get
+                           Code  0000ef2a      0x20      2  peer_data_storage.o
+  .text.file_id_to_peer_id
+                           Code  0000ef4a      0x20      2  peer_data_storage.o
+  .text.pds_space_reserve  Code  0000ef6a      0x58      2  peer_data_storage.o
+  .text.pds_space_reserve_cancel
+                           Code  0000efc2      0x24      2  peer_data_storage.o
+  .text.pdb_next_peer_id_get
+                           Code  0000efe6      0x20      2  peer_database.o
+  .text.peer_data_point_to_buffer
+                           Code  0000f006      0x4c      2  peer_database.o
+  .text.peer_data_const_point_to_buffer
+                           Code  0000f052      0x2c      2  peer_database.o
+  .text.write_buffer_record_find
+                           Code  0000f07e      0x64      2  peer_database.o
+  .text.pdb_peer_free      Code  0000f0e2      0xa8      2  peer_database.o
+  .text.pdb_peer_allocate  Code  0000f18a       0xc      2  peer_database.o
+  .text.pdb_next_deleted_peer_id_get
+                           Code  0000f196      0x20      2  peer_database.o
+  .text.internal_state_reset
+                           Code  0000f1b6      0x18      2  peer_id.o
+  .text.pm_buffer_release  Code  0000f1ce      0x60      2  pm_buffer.o
+  .text.pm_mutex_lock      Code  0000f22e      0x48      2  pm_mutex.o
+  .text.pm_mutex_lock_first_available
+                           Code  0000f276      0x7c      2  pm_mutex.o
+  .text.sd_ble_gap_authenticate
+                           Code  0000f2f2       0x8      2  security_dispatcher.o
+  .text.sd_ble_gap_sec_params_reply
+                           Code  0000f2fa       0x8      2  security_dispatcher.o
+  .text.pm_mutex_lock_status_get
+                           Code  0000f302      0x48      2  pm_mutex.o
+  .text.pm_mutex_init      Code  0000f34a      0x30      2  pm_mutex.o
+  .text.sd_ble_gap_encrypt
+                           Code  0000f37a       0x8      2  security_dispatcher.o
+  .text.sd_ble_gap_sec_info_reply
+                           Code  0000f382       0x8      2  security_dispatcher.o
+  .text.pm_conn_sec_config_reply
+                           Code  0000f38a      0x24      2  peer_manager.o
+  .text.pm_buffer_block_acquire
+                           Code  0000f3ae      0xf4      2  pm_buffer.o
+  .text.events_send_from_err_code
+                           Code  0000f4a2      0x68      2  security_manager.o
+  .text.flag_id_init       Code  0000f50a      0x20      2  security_manager.o
+  .text.sd_ble_gatts_value_set
+                           Code  0000f52a       0x8      2  ble_bas.o
+  .text.sd_ble_gatts_service_add
+                           Code  0000f532       0x8      2  ble_bas.o
+  .text.sd_ble_gatts_hvx   Code  0000f53a       0x8      2  ble_bas.o
+  .text.sd_ble_gatts_characteristic_add
+                           Code  0000f542       0x8      2  ble_bas.o
+  .text.sd_ble_gatts_descriptor_add
+                           Code  0000f54a       0x8      2  ble_bas.o
+  .text.on_write           Code  0000f552      0x60      2  ble_bas.o
+  .text.on_connect         Code  0000f5b2      0x14      2  ble_bas.o
+  .text.on_disconnect      Code  0000f5c6      0x14      2  ble_bas.o
+  .text.on_connect         Code  0000f5da      0x14      2  ble_cscs.o
+  .text.on_write           Code  0000f5ee      0x2c      2  ble_cscs.o
+  .text.ble_cscs_on_ble_evt
+                           Code  0000f61a      0x58      2  ble_cscs.o
+  .text.on_disconnect      Code  0000f672      0x14      2  ble_cscs.o
+  .text.csc_measurement_encode
+                           Code  0000f686     0x110      2  ble_cscs.o
+  .text.sd_ble_gatts_service_add
+                           Code  0000f796       0x8      2  ble_cscs.o
+  .text.sd_ble_gatts_hvx   Code  0000f79e       0x8      2  ble_cscs.o
+  .text.sd_ble_gatts_characteristic_add
+                           Code  0000f7a6       0x8      2  ble_cscs.o
+  .text.sd_ble_gatts_characteristic_add
+                           Code  0000f7ae       0x8      2  ble_dis.o
+  .text.sys_id_encode      Code  0000f7b6      0xdc      2  ble_dis.o
+  .text.sd_ble_gatts_service_add
+                           Code  0000f892       0x8      2  ble_dis.o
+  .text.ble_sc_ctrlpt_rsp_send
+                           Code  0000f89a      0x9c      2  ble_sc_ctrlpt.o
+  .text.sd_ble_gatts_rw_authorize_reply
+                           Code  0000f936       0x8      2  ble_sc_ctrlpt.o
+  .text.ble_sc_ctrlpt_on_ble_evt
+                           Code  0000f93e      0x70      2  ble_sc_ctrlpt.o
+  .text.sd_ble_gatts_value_get
+                           Code  0000f9ae       0x8      2  ble_sc_ctrlpt.o
+  .text.is_location_supported
+                           Code  0000f9b6      0x44      2  ble_sc_ctrlpt.o
+  .text.is_cccd_configured
+                           Code  0000f9fa      0x74      2  ble_sc_ctrlpt.o
+  .text.sd_ble_gatts_value_set
+                           Code  0000fa6e       0x8      2  ble_sc_ctrlpt.o
+  .text.sd_ble_gatts_characteristic_add
+                           Code  0000fa76       0x8      2  ble_sc_ctrlpt.o
+  .text.sd_ble_gatts_hvx   Code  0000fa7e       0x8      2  ble_sc_ctrlpt.o
+  .text.on_disconnect      Code  0000fa86      0x1c      2  ble_sc_ctrlpt.o
+  .text.on_connect         Code  0000faa2      0x1c      2  ble_sc_ctrlpt.o
+  .text.auth_status_process
+                           Code  0000fabe      0x28      2  security_dispatcher.o
+  .text.sec_request_process
+                           Code  0000fae6      0x58      2  security_dispatcher.o
+  .text.flag_id_init       Code  0000fb3e      0x20      2  security_dispatcher.o
+  .text.link_secure_central_existing_peer
+                           Code  0000fb5e     0x190      2  security_dispatcher.o
+  .text.sdk_mapped_flags_any_set
+                           Code  0000fcee      0x1c      2  security_manager.o
+  .text.nrf_gpio_pin_read  Code  0000fd0a      0x2c      2  nrf_drv_gpiote.o
+  .text.nrf_gpio_pin_sense_get
+                           Code  0000fd36      0x2c      2  nrf_drv_gpiote.o
+  .text.nrf_gpio_cfg_watcher
+                           Code  0000fd62      0x38      2  nrf_drv_gpiote.o
+  .text.nrf_bitmask_bit_set
+                           Code  0000fd9a      0x40      2  nrf_drv_gpiote.o
+  .text.nrf_bitmask_bit_is_set
+                           Code  0000fdda      0x30      2  nrf_drv_gpiote.o
+  .text.nrf_uart_rxd_get   Code  0000fe0a      0x14      2  nrf_drv_uart.o
+  .text.nrf_uart_event_check
+                           Code  0000fe1e      0x24      2  nrf_drv_uart.o
+  .text.nrf_uart_event_clear
+                           Code  0000fe42      0x20      2  nrf_drv_uart.o
+  .text.nrf_uart_errorsrc_get_and_clear
+                           Code  0000fe62      0x20      2  nrf_drv_uart.o
+  .text.nrf_drv_gpiote_in_is_set
+                           Code  0000fe82      0x1c      2  nrf_drv_gpiote.o
+  .text.nrf_uart_task_trigger
+                           Code  0000fe9e      0x20      2  nrf_drv_uart.o
+  .text.rx_byte            Code  0000febe      0x60      2  nrf_drv_uart.o
+  .text.tx_done_event      Code  0000ff1e      0x40      2  nrf_drv_uart.o
+  .text.app_error_fault_handler
+                           Code  0000ff5e      0x14      2  app_error_weak.o
+  .text.nrf_clock_lf_src_set
+                           Code  0000ff72      0x24      2  nrf_drv_clock.o
+  .text.nrf_drv_clock_on_soc_event
+                           Code  0000ff96      0x18      2  nrf_drv_clock.o
+  .text.item_dequeue       Code  0000ffae      0x20      2  nrf_drv_clock.o
+  .text.nrf_drv_common_irq_enable
+                           Code  0000ffce      0x4c      2  nrf_drv_common.o
+  .text.nrf_gpiote_event_clear
+                           Code  0001001a      0x24      2  nrf_drv_gpiote.o
+  .text.fds_record_find    Code  0001003e      0x2c      2  fds.o
+  .text.fds_reserve        Code  0001006a      0x68      2  fds.o
+  .text.fds_record_write_reserved
+                           Code  000100d2      0x28      2  fds.o
+  .text.fds_record_write   Code  000100fa      0x1c      2  fds.o
+  .text.send_event         Code  00010116      0x80      2  fstorage.o
+  .text.erase_execute      Code  00010196      0x18      2  fstorage.o
+  .text.sd_flash_page_erase
+                           Code  000101ae       0x8      2  fstorage.o
+  .text.sd_flash_write     Code  000101b6       0x8      2  fstorage.o
+  .text.sdk_mapped_flags_set_by_index
+                           Code  000101be      0x2c      2  sdk_mapped_flags.o
+  .text.sdk_mapped_flags_clear_by_index
+                           Code  000101ea      0x30      2  sdk_mapped_flags.o
+  .text.sensorsim_increment
+                           Code  0001021a      0x3c      2  sensorsim.o
+  .text.sensorsim_measure  Code  00010256      0x34      2  sensorsim.o
+  .text.sdk_mapped_flags_update_by_key
+                           Code  0001028a      0x38      2  sdk_mapped_flags.o
+  .text.sdk_mapped_flags_key_list_get
+                           Code  000102c2      0x74      2  sdk_mapped_flags.o
+  .text.sdk_mapped_flags_get_by_key
+                           Code  00010336      0x60      2  sdk_mapped_flags.o
+  .text.sensorsim_decrement
+                           Code  00010396      0x3c      2  sensorsim.o
+  .text.timer_timeouts_check_sched
+                           Code  000103d2       0xc      2  app_timer.o
+  .text.timer_stop_op_schedule
+                           Code  000103de      0x78      2  app_timer.o
+  .text.timer_list_handler_sched
+                           Code  00010456       0xc      2  app_timer.o
+  .text.app_util_critical_region_enter
+                           Code  00010462      0x14      2  app_util_platform.o
+  .text.page_is_erased     Code  00010476      0x30      2  fds.o
+  .text.fs_event_handler   Code  000104a6      0x20      2  fds.o
+  .text.sd_evt_get         Code  000104c6       0x8      2  softdevice_handler.o
+  .text.sd_softdevice_enable
+                           Code  000104ce       0x8      2  softdevice_handler.o
+  .text.sd_ble_evt_get     Code  000104d6       0x8      2  softdevice_handler.o
+  .text.sd_ble_enable      Code  000104de       0x8      2  softdevice_handler.o
+  .text.softdevice_fault_handler
+                           Code  000104e6      0x1c      2  softdevice_handler.o
+  .text.libc.__uint32_div  Code  00010502      0x28      2  libc_asm.o (libc_v6m_t_le_eabi.a)
+  .text.libc.__aeabi_idivmod
+                           Code  0001052a      0x40      2  libc_asm.o (libc_v6m_t_le_eabi.a)
+  .text.libc.__int32_div   Code  0001056a      0x3c      2  libc_asm.o (libc_v6m_t_le_eabi.a)
+  .text.libc.memcmp        Code  000105a6      0x60      2  libc2.o (libc_v6m_t_le_eabi.a)
+
+place in [0x00000000 to 0x0003ffff] with auto order
+
+  Section                  Type  Address       Size  Align  Object
+  -------                  ----  -------       ----  -----  ------
+
+place in [0x20000000 to 0x20007fff] with auto order
+
+  Section                  Type  Address       Size  Align  Object
+  -------                  ----  -------       ----  -----  ------
+
+place in [0x20000000 to 0x20007fff] with auto order
+
+  Section                  Type  Address       Size  Align  Object
+  -------                  ----  -------       ----  -----  ------
+  .data.m_whitelist        Data  20000000      0x10      4  ble_advertising.o
+  .data.m_adv_uuids        Data  20000010       0xc      4  main.o
+  .data.supported_locations
+                           Data  2000001c       0xa      4  main.o
+  .data.SystemCoreClock    Data  20000028       0x4      4  system_nrf51.o
+  .data.m_evt_handlers     Data  2000002c       0x4      4  gatt_cache_manager.o
+  .data.m_evt_handler      Data  20000030       0x4      4  gatts_cache_manager.o
+  .data.m_conn_handle      Data  20000026       0x2      2  main.o
+  .data.m_flag_reject_pairing
+                           Data  20000034       0x1      1  security_manager.o
+  .data.m_flag_params_reply_pending_busy
+                           Data  20000035       0x1      1  security_manager.o
+  .data.m_flag_params_reply_pending_flash_full
+                           Data  20000036       0x1      1  security_manager.o
+  .data.m_flag_link_secure_null_params
+                           Data  20000037       0x1      1  security_manager.o
+  .data.m_flag_sec_proc_new_peer
+                           Data  20000038       0x1      1  security_dispatcher.o
+  .data.m_flag_sec_proc_pairing
+                           Data  20000039       0x1      1  security_dispatcher.o
+  .data.m_flag_sec_proc    Data  2000003a       0x1      1  security_dispatcher.o
+  .data.m_flag_link_secure_pending_flash_full
+                           Data  2000003b       0x1      1  security_manager.o
+  .data.m_flag_link_secure_force_repairing
+                           Data  2000003c       0x1      1  security_manager.o
+  .data.m_flag_link_secure_pending_busy
+                           Data  2000003d       0x1      1  security_manager.o
+  .bss.buffer_memory.6864  Data  20000040     0x280      4  peer_database.o
+  .bss.m_write_buffer_records
+                           Data  200002c0      0xa0      4  peer_database.o
+  .bss.m_whitelist_irks    Data  20000360      0x80      4  ble_advertising.o
+  .bss.APP_TIMER_BUF.8439  Data  200003e0      0x78      4  main.o
+  .bss.m_op_queue          Data  20000458      0x78      4  fds.o
+  .bss.m_cscs              Data  200004d0      0x68      4  main.o
+  .bss.m_queue             Data  20000538      0x68      4  fstorage.o
+  .bss.m_connections       Data  200005a0      0x60      4  id_manager.o
+  .bss.BLE_EVT_BUFFER.8542
+                           Data  20000600      0x48      4  main.o
+  .bss.m_cb                Data  20000648      0x48      4  nrf_drv_gpiote.o
+  .bss.m_chunk_queue       Data  20000690      0x48      4  fds.o
+  .bss.m_pi                Data  200006d8      0x40      4  peer_id.o
+  .bss.m_peer_pk           Data  20000718      0x40      4  security_dispatcher.o
+  .bss.m_advdata           Data  20000758      0x3c      4  ble_advertising.o
+  .bss.m_whitelist_addrs   Data  20000794      0x38      4  ble_advertising.o
+  .bss.m_bcs               Data  200007cc      0x34      4  ble_conn_state.o
+  .bss.m_battery_timer_id_data
+                           Data  20000800      0x20      4  main.o
+  .bss.m_csc_meas_timer_id_data
+                           Data  20000820      0x20      4  main.o
+  .bss.m_button_timer_id_data
+                           Data  20000840      0x20      4  bsp.o
+  .bss.m_alert_timer_id_data
+                           Data  20000860      0x20      4  bsp.o
+  .bss.m_leds_timer_id_data
+                           Data  20000880      0x20      4  bsp.o
+  .bss.m_p_whitelist_irks  Data  200008a0      0x20      4  ble_advertising.o
+  .bss.m_adv_modes_config  Data  200008c0      0x20      4  ble_advertising.o
+  .bss.m_p_whitelist_addrs
+                           Data  200008e0      0x20      4  ble_advertising.o
+  .bss.m_conn_params_timer_id_data
+                           Data  20000900      0x20      4  ble_conn_params.o
+  .bss.m_detection_delay_timer_id_data
+                           Data  20000920      0x20      4  app_button.o
+  .bss.m_cb_table          Data  20000940      0x20      4  fds.o
+  .bss.m_pages             Data  20000960      0x20      4  fds.o
+  .bss.m_manuf_data_array  Data  20000980      0x1f      4  ble_advertising.o
+  .bss.m_service_data_array
+                           Data  200009a0      0x1f      4  ble_advertising.o
+  .bss.m_conn_params_config
+                           Data  200009c0      0x1c      4  ble_conn_params.o
+  .bss.m_cb                Data  200009dc      0x1c      4  nrf_drv_uart.o
+  .bss.m_bas               Data  200009f8      0x18      4  main.o
+  .bss.m_clock_cb          Data  20000a10      0x14      4  nrf_drv_clock.o
+  .bss.m_speed_kph_sim_cfg
+                           Data  20000a24      0x10      4  main.o
+  .bss.m_battery_sim_cfg   Data  20000a34      0x10      4  main.o
+  .bss.m_crank_rpm_sim_cfg
+                           Data  20000a44      0x10      4  main.o
+  .bss.m_write_buffer      Data  20000a54      0x10      4  peer_database.o
+  .bss.m_gc                Data  20000a64      0x10      4  fds.o
+  .bss.m_events_list       Data  20000a74       0xc      4  bsp.o
+  .bss.m_manuf_specific_data
+                           Data  20000a80       0xc      4  ble_advertising.o
+  .bss.m_service_data      Data  20000a8c       0xc      4  ble_advertising.o
+  .bss.m_evt_handlers      Data  20000a98       0xc      4  peer_manager.o
+  .bss.desc.6141           Data  20000aa4       0xc      4  fds.o
+  .bss.m_battery_sim_state
+                           Data  20000ab0       0x8      4  main.o
+  .bss.m_speed_kph_sim_state
+                           Data  20000ab8       0x8      4  main.o
+  .bss.m_crank_rpm_sim_state
+                           Data  20000ac0       0x8      4  main.o
+  .bss.m_preferred_conn_params
+                           Data  20000ac8       0x8      4  ble_conn_params.o
+  .bss.m_current_conn_params
+                           Data  20000ad0       0x8      4  ble_conn_params.o
+  .bss.m_fds_ftok          Data  20000ad8       0x8      4  peer_data_storage.o
+  .bss.fw_rev_handles      Data  20000ae0       0x8      4  ble_dis.o
+  .bss.manufact_name_handles
+                           Data  20000ae8       0x8      4  ble_dis.o
+  .bss.sw_rev_handles      Data  20000af0       0x8      4  ble_dis.o
+  .bss.hw_rev_handles      Data  20000af8       0x8      4  ble_dis.o
+  .bss.sys_id_handles      Data  20000b00       0x8      4  ble_dis.o
+  .bss.serial_num_handles  Data  20000b08       0x8      4  ble_dis.o
+  .bss.reg_cert_data_list_handles
+                           Data  20000b10       0x8      4  ble_dis.o
+  .bss.pnp_id_handles      Data  20000b18       0x8      4  ble_dis.o
+  .bss.model_num_handles   Data  20000b20       0x8      4  ble_dis.o
+  .bss.tok.6047            Data  20000b28       0x8      4  fds.o
+  .bss.m_ticks_elapsed     Data  20000b30       0x8      4  app_timer.o
+  .bss.m_op_queue          Data  20000b38       0x8      4  app_timer.o
+  .bss.nrf_nvic_state      Data  20000b40       0x8      4  app_util_platform.o
+  .bss.m_swap_page         Data  20000b48       0x8      4  fds.o
+  .bss.m_peer_address      Data  20000b50       0x7      4  ble_advertising.o
+  .bss.m_current_id_addr   Data  20000b58       0x7      4  id_manager.o
+  .bss.m_sec_params        Data  20000b60       0x5      4  security_manager.o
+  .bss.m_cumulative_wheel_revs
+                           Data  20000b68       0x4      4  main.o
+  .bss.release_event_at_push.5564
+                           Data  20000b6c       0x4      4  bsp.o
+  .bss.m_registered_callback
+                           Data  20000b70       0x4      4  bsp.o
+  .bss.m_indication_type   Data  20000b74       0x4      4  bsp.o
+  .bss.m_app_ticks_per_100ms
+                           Data  20000b78       0x4      4  bsp.o
+  .bss.m_num_connections   Data  20000b7c       0x4      4  bsp_btn_ble.o
+  .bss.m_error_handler     Data  20000b80       0x4      4  bsp_btn_ble.o
+  .bss.m_slave_conn_int    Data  20000b84       0x4      4  ble_advertising.o
+  .bss.m_evt_handler       Data  20000b88       0x4      4  ble_advertising.o
+  .bss.m_error_handler     Data  20000b8c       0x4      4  ble_advertising.o
+  .bss.m_n_writes          Data  20000b90       0x4      4  peer_database.o
+  .bss.m_peer_rank_token   Data  20000b94       0x4      4  peer_manager.o
+  .bss.m_current_highest_peer_rank
+                           Data  20000b98       0x4      4  peer_manager.o
+  .bss.m_p_public_key      Data  20000b9c       0x4      4  security_manager.o
+  .bss.m_detection_delay   Data  20000ba0       0x4      4  app_button.o
+  .bss.m_pin_transition    Data  20000ba4       0x4      4  app_button.o
+  .bss.mp_buttons          Data  20000ba8       0x4      4  app_button.o
+  .bss.m_pin_state         Data  20000bac       0x4      4  app_button.o
+  .bss.m_evt_schedule_func
+                           Data  20000bb0       0x4      4  app_timer.o
+  .bss.mp_timer_id_head    Data  20000bb4       0x4      4  app_timer.o
+  .bss.m_ticks_latest      Data  20000bb8       0x4      4  app_timer.o
+  .bss.m_latest_rec_id     Data  20000bbc       0x4      4  fds.o
+  .bss.m_ble_evt_handler   Data  20000bc0       0x4      4  softdevice_handler.o
+  .bss.m_evt_schedule_func
+                           Data  20000bc4       0x4      4  softdevice_handler.o
+  .bss.m_sys_evt_handler   Data  20000bc8       0x4      4  softdevice_handler.o
+  .bss.mp_ble_evt_buffer   Data  20000bcc       0x4      4  softdevice_handler.o
+  .bss.wheel_revolution_mm.8425
+                           Data  2000003e       0x2      2  main.o
+  .bss.crank_rev_degrees.8426
+                           Data  20000b66       0x2      2  main.o
+  .bss.cumulative_crank_revs.8423
+                           Data  20000bd0       0x2      2  main.o
+  .bss.event_time.8424     Data  20000bd2       0x2      2  main.o
+  .bss.m_current_slave_link_conn_handle
+                           Data  20000bd4       0x2      2  ble_advertising.o
+  .bss.m_conn_handle       Data  20000bd6       0x2      2  ble_conn_params.o
+  .bss.m_current_sc_store_peer_id
+                           Data  20000bd8       0x2      2  gatts_cache_manager.o
+  .bss.start_handle.6842   Data  20000bda       0x2      2  gatts_cache_manager.o
+  .bss.m_highest_ranked_peer
+                           Data  20000bdc       0x2      2  peer_manager.o
+  .bss.service_handle      Data  20000bde       0x2      2  ble_dis.o
+  .bss.m_ble_evt_buffer_size
+                           Data  20000be0       0x2      2  softdevice_handler.o
+  .bss.m_auto_calibration_in_progress
+                           Data  2000099f       0x1      1  main.o
+  .bss.current_long_push_pin_no.5563
+                           Data  200009bf       0x1      1  bsp.o
+  .bss.m_stable_state      Data  20000b57       0x1      1  bsp.o
+  .bss.m_leds_clear        Data  20000b5f       0x1      1  bsp.o
+  .bss.m_whitelist_reply_expected
+                           Data  20000b65       0x1      1  ble_advertising.o
+  .bss.m_advertising_start_pending
+                           Data  20000be2       0x1      1  ble_advertising.o
+  .bss.m_adv_mode_current  Data  20000be3       0x1      1  ble_advertising.o
+  .bss.m_whitelist_temporarily_disabled
+                           Data  20000be4       0x1      1  ble_advertising.o
+  .bss.m_adv_evt           Data  20000be5       0x1      1  ble_advertising.o
+  .bss.m_peer_addr_reply_expected
+                           Data  20000be6       0x1      1  ble_advertising.o
+  .bss.m_initialized       Data  20000be7       0x1      1  ble_advertising.o
+  .bss.m_update_count      Data  20000be8       0x1      1  ble_conn_params.o
+  .bss.m_change_param      Data  20000be9       0x1      1  ble_conn_params.o
+  .bss.m_flag_local_db_update_pending
+                           Data  20000bea       0x1      1  gatt_cache_manager.o
+  .bss.m_flag_service_changed_pending
+                           Data  20000beb       0x1      1  gatt_cache_manager.o
+  .bss.m_flag_service_changed_sent
+                           Data  20000bec       0x1      1  gatt_cache_manager.o
+  .bss.m_module_initialized
+                           Data  20000bed       0x1      1  gatt_cache_manager.o
+  .bss.m_flag_local_db_apply_pending
+                           Data  20000bee       0x1      1  gatt_cache_manager.o
+  .bss.m_module_initialized
+                           Data  20000bef       0x1      1  gatts_cache_manager.o
+  .bss.m_conn_state_user_flag_id
+                           Data  20000bf0       0x1      1  id_manager.o
+  .bss.m_module_initialized
+                           Data  20000bf1       0x1      1  id_manager.o
+  .bss.m_peer_delete_ongoing
+                           Data  20000bf2       0x1      1  peer_data_storage.o
+  .bss.m_module_initialized
+                           Data  20000bf3       0x1      1  peer_data_storage.o
+  .bss.m_peer_delete_queued
+                           Data  20000bf4       0x1      1  peer_data_storage.o
+  .bss.m_module_initialized
+                           Data  20000bf5       0x1      1  peer_database.o
+  .bss.m_deleting_all      Data  20000bf6       0x1      1  peer_manager.o
+  .bss.m_module_initialized
+                           Data  20000bf7       0x1      1  peer_manager.o
+  .bss.m_pairing_flag_id   Data  20000bf8       0x1      1  peer_manager.o
+  .bss.m_n_registrants     Data  20000bf9       0x1      1  peer_manager.o
+  .bss.m_bonding_flag_id   Data  20000bfa       0x1      1  peer_manager.o
+  .bss.m_peer_rank_initialized
+                           Data  20000bfb       0x1      1  peer_manager.o
+  .bss.m_module_initialized
+                           Data  20000bfc       0x1      1  security_dispatcher.o
+  .bss.m_module_initialized
+                           Data  20000bfd       0x1      1  security_manager.o
+  .bss.m_sec_params_valid  Data  20000bfe       0x1      1  security_manager.o
+  .bss.m_button_count      Data  20000bff       0x1      1  app_button.o
+  .bss.m_flags             Data  20000c00       0x1      1  fstorage.o
+  .bss.m_retry_count       Data  20000c01       0x1      1  fstorage.o
+  .bss.m_ticks_elapsed_q_write_ind
+                           Data  20000c02       0x1      1  app_timer.o
+  .bss.m_rtc1_running      Data  20000c03       0x1      1  app_timer.o
+  .bss.m_rtc1_reset        Data  20000c04       0x1      1  app_timer.o
+  .bss.m_ticks_elapsed_q_read_ind
+                           Data  20000c05       0x1      1  app_timer.o
+  .bss.m_flags             Data  20000c06       0x1      1  fds.o
+  .bss.m_users             Data  20000c07       0x1      1  fds.o
+  .bss.m_suspended         Data  20000c08       0x1      1  softdevice_handler.o
+  .bss.m_softdevice_enabled
+                           Data  20000c09       0x1      1  softdevice_handler.o
+  .bss.mutex_memory.6865   Data  20000c0c       0x1      4  peer_database.o
+
+place in [0x20000000 to 0x20007fff] with auto order
+
+  Section                  Type  Address       Size  Align  Object
+  -------                  ----  -------       ----  -----  ------
+
+
+***************************************************************************************
+***                                                                                 ***
+***                                 MODULE SUMMARY                                  ***
+***                                                                                 ***
+***************************************************************************************
+
+                                            Object      Code  RO Data  RW Data  ZI Data
+---------------------------------------------------------------------------------------
+                            SEGGER_THUMB_Startup.o       100                            
+                                    system_nrf51.o       400                 4          
+                               ses_nrf51_startup.o       296                            
+                                            main.o      4114      104       24      469 
+                                          boards.o       974        8                   
+                                             bsp.o      2014      140               127 
+                                     bsp_btn_ble.o       526                          8 
+                                     ble_advdata.o      3154                            
+                                 ble_advertising.o      2190       20       16      454 
+                                 ble_conn_params.o       962        4                80 
+                                  ble_conn_state.o      1192                         52 
+                                  ble_srv_common.o       264                            
+                              gatt_cache_manager.o      2170                 4        5 
+                             gatts_cache_manager.o      1130       24        4        5 
+                                      id_manager.o      2290        8               105 
+                               peer_data_storage.o      2400       24                11 
+                                   peer_database.o      2972       60               822 
+                                         peer_id.o       862                         64 
+                                    peer_manager.o      2324      132                28 
+                                       pm_buffer.o       560                            
+                                        pm_mutex.o       604                            
+                             security_dispatcher.o      3770       64        3       65 
+                                security_manager.o      2482       40        7       11 
+                                         ble_bas.o      1190                            
+                                        ble_cscs.o      1938                            
+                                         ble_dis.o      1416                         74 
+                                   ble_sc_ctrlpt.o      2342                            
+                                   nrf_drv_clock.o       636                         20 
+                                  nrf_drv_common.o       400                            
+                                  nrf_drv_gpiote.o      3048                         72 
+                                    nrf_drv_uart.o      1086                         28 
+                                      app_button.o       696        4                49 
+                                       app_error.o        48                            
+                                  app_error_weak.o        48                            
+                                       app_timer.o      3436                         32 
+                               app_util_platform.o       254                          8 
+                                             fds.o      7432      216       16      306 
+                                        fstorage.o      1886                        106 
+                                sdk_mapped_flags.o       644                            
+                                       sensorsim.o       222                            
+                              softdevice_handler.o      1402                         20 
+                 libc_asm.o (libc_v6m_t_le_eabi.a)       206                            
+                    libc2.o (libc_v6m_t_le_eabi.a)        96                            
+                libc2_asm.o (libc_v6m_t_le_eabi.a)        54                            
+                                                    ===================================
+                                            Total:     66230      848       78     3021
+                                                    ===================================
+
+
+***************************************************************************************
+***                                                                                 ***
+***                                  LINK SUMMARY                                   ***
+***                                                                                 ***
+***************************************************************************************
+
+Link complete: 0 errors, 0 warnings, 1 remarks
+
+       Regions          Size       Allocated         Used   Loading  (Alignment loss)
+  -------- -------- --------   -------- -------- --------   -------  ----------------
+  00000000 0003ffff   262144   00000000 00010605    67078    25.59%         0   0.00%
+  20000000 20007fff    32768   20000000 20007fff    32768   100.00%     27637  84.34%
+
+Section composition:
+
+     66230  RX        78  RW
+       848  RO      5069  ZI
+  ------------   -----------
+     67078 ROM      5147 RAM
