@@ -254,15 +254,15 @@ static void gap_params_init(void){
 // Function for handling the data from the Nordic UART Service.This function will process the data received from the Nordic UART BLE Service and send it to the UART module.
 static void nus_data_handler(ble_nus_t * p_nus, uint8_t * p_data, uint16_t length)
 {
-		uint8_t array[] = {1,2,3};
-    for (uint32_t i = 0; i < length; i++)
-    {
-      printf("array %d", array[i]);  
-			while (app_uart_put(p_data[i]) != NRF_SUCCESS);	
-    }
-    while (app_uart_put('\r') != NRF_SUCCESS);
-    while (app_uart_put('\n') != NRF_SUCCESS);
-			
+	NRF_LOG_INFO("Data received");
+	ble_nus_string_send(p_nus, p_data, length);
+
+    //for (uint32_t i = 0; i < length; i++)
+    //{
+		//while (app_uart_put(p_data[i]) != NRF_SUCCESS);
+    //}
+    //while (app_uart_put('\r') != NRF_SUCCESS);
+    //while (app_uart_put('\n') != NRF_SUCCESS);
 }
 
 // Function for initializing services that will be used by the application.
@@ -714,12 +714,12 @@ int main(void)
     bool     erase_bonds;
 
     // Initialize.
-	  APP_TIMER_INIT(APP_TIMER_PRESCALER, APP_TIMER_OP_QUEUE_SIZE, false);
+	APP_TIMER_INIT(APP_TIMER_PRESCALER, APP_TIMER_OP_QUEUE_SIZE, false);
     uart_init();
-	
+
     err_code = NRF_LOG_INIT(NULL);
     APP_ERROR_CHECK(err_code);
-		
+
     timers_init();
     buttons_leds_init(&erase_bonds);
     ble_stack_init();
@@ -732,20 +732,19 @@ int main(void)
     advertising_init();
     services_init();
     conn_params_init();
-		
+
     // Start execution.
     NRF_LOG_INFO("Template started\r\n");
     application_timers_start();
     err_code = ble_advertising_start(BLE_ADV_MODE_FAST);
     APP_ERROR_CHECK(err_code);
-		
-		
+
     // Enter main loop.
    for (;;) {
 		 if (NRF_LOG_PROCESS() == false){
             power_manage();
-    }
-		 
+		 }
+
 	}
-		
+
 }
