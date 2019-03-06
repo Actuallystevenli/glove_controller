@@ -674,18 +674,18 @@ static void advertising_init(void){
 
 // Function for initializing buttons and leds.
 static void buttons_leds_init(bool * p_erase_bonds){
-    bsp_event_t startup_event;
+    //bsp_event_t startup_event;
 
-    uint32_t err_code = bsp_init(BSP_INIT_LED | BSP_INIT_BUTTONS,
+    uint32_t err_code = bsp_init(BSP_INIT_LED,
                                  APP_TIMER_TICKS(100, APP_TIMER_PRESCALER),
                                  bsp_event_handler);
 
     APP_ERROR_CHECK(err_code);
 
-    err_code = bsp_btn_ble_init(NULL, &startup_event);
-    APP_ERROR_CHECK(err_code);
+    //err_code = bsp_btn_ble_init(NULL, &startup_event);
+    //APP_ERROR_CHECK(err_code);
 
-    *p_erase_bonds = (startup_event == BSP_EVENT_CLEAR_BONDING_DATA);
+   // *p_erase_bonds = (startup_event == BSP_EVENT_CLEAR_BONDING_DATA);
 }
 
 // Function for the Power manager.
@@ -705,13 +705,17 @@ static void advertising_start(void)
     APP_ERROR_CHECK(err_code);
 }
 
+// Button handler
+void button_handler(uint8_t pin_no, uint8_t button_action) {
+	NRF_LOG_INFO("Button Pressed\r\n");
+}
 
 // Function for application main entry.
  
 int main(void)
 {
     uint32_t err_code;
-    bool     erase_bonds;
+    bool erase_bonds = false;
 
     // Initialize.
 	APP_TIMER_INIT(APP_TIMER_PRESCALER, APP_TIMER_OP_QUEUE_SIZE, false);
@@ -732,6 +736,19 @@ int main(void)
     advertising_init();
     services_init();
     conn_params_init();
+
+    // Init button
+    app_button_cfg_t button_config;
+    memset(&button_config, 0, sizeof(button_config));
+    button_config.active_state = APP_BUTTON_ACTIVE_HIGH;
+    button_config.pin_no = NRF_GPIO_PIN_MAP(0,12);
+    button_config.pull_cfg = GPIO_PIN_CNF_PULL_Pullup;
+    button_config.button_handler = &button_handler;
+    err_code = app_button_init(&button_config, 1, 5);
+    APP_ERROR_CHECK(err_code);
+
+    err_code = app_button_enable();
+    APP_ERROR_CHECK(err_code);
 
     // Start execution.
     NRF_LOG_INFO("Template started\r\n");
