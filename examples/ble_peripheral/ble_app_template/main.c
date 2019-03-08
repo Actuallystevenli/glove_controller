@@ -740,7 +740,7 @@ int main(void)
     // Init button
     app_button_cfg_t button_config;
     memset(&button_config, 0, sizeof(button_config));
-    button_config.active_state = APP_BUTTON_ACTIVE_HIGH;
+    button_config.active_state = APP_BUTTON_ACTIVE_LOW;
     button_config.pin_no = NRF_GPIO_PIN_MAP(0,12);
     button_config.pull_cfg = GPIO_PIN_CNF_PULL_Pullup;
     button_config.button_handler = &button_handler;
