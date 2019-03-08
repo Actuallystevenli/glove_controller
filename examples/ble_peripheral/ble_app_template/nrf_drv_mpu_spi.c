@@ -29,7 +29,7 @@
 #define MPU_SPI_MISO_PIN    3 // MPU SDO. 'AD0' on MPU breakout board silk screen
 #define MPU_SPI_MOSI_PIN    2  // MPU SDI. 'SDA' on MPU breakout board silk screen
 #define MPU_SPI_SCL_PIN     1  // MPU SCLK. 'SCL' on MPU breakout board silk screen
-#define MPU_SPI_CS_PIN      4 // MPU nCS. 'NCS' on MPU breakout board silk screen
+#define MPU_SPI_CS_PIN      5 // MPU nCS. 'NCS' on MPU breakout board silk screen
 #endif
 
 
@@ -87,7 +87,7 @@ uint32_t nrf_drv_mpu_init(void)
 
 /**@brief Function to merge a register and a buffer of data
  */
-static void merge_register_and_data(uint8_t * new_buffer, uint8_t reg, uint8_t * p_data, uint32_t length)
+static void buffer_merger(uint8_t * new_buffer, uint8_t reg, uint8_t * p_data, uint32_t length)
 {
     new_buffer[0] = reg;
     memcpy((new_buffer + 1), p_data, length);
@@ -97,7 +97,7 @@ static void merge_register_and_data(uint8_t * new_buffer, uint8_t reg, uint8_t *
 /**@brief Function to write a series of bytes. The function merges 
  * the register and the data.
  */
-uint32_t nrf_drv_mpu_write_registers(uint8_t reg, uint8_t * p_data, uint32_t length)
+uint32_t mpu_write_burst(uint8_t reg, uint8_t * p_data, uint32_t length)
 {
     uint32_t err_code;
     
@@ -110,7 +110,7 @@ uint32_t nrf_drv_mpu_write_registers(uint8_t reg, uint8_t * p_data, uint32_t len
     // Add write bit to register. 
     reg = reg | MPU_SPI_WRITE_BIT;
     
-    merge_register_and_data(spi_tx_buffer, reg, p_data, length + 1);
+    buffer_merger(spi_tx_buffer, reg, p_data, length + 1);
     
     err_code = nrf_drv_spi_transfer(&m_spi_instance, spi_tx_buffer, length + 1, NULL, 0);
     if(err_code != NRF_SUCCESS) return err_code;
@@ -123,7 +123,7 @@ uint32_t nrf_drv_mpu_write_registers(uint8_t reg, uint8_t * p_data, uint32_t len
     return err_code;
 }
 
-uint32_t nrf_drv_mpu_write_single_register(uint8_t reg, uint8_t data)
+uint32_t mpu_write_register(uint8_t reg, uint8_t data)
 {
     uint32_t err_code;
     uint32_t timeout = MPU_SPI_TIMEOUT;
@@ -145,7 +145,7 @@ uint32_t nrf_drv_mpu_write_single_register(uint8_t reg, uint8_t data)
 }
 
 
-uint32_t nrf_drv_mpu_read_registers(uint8_t reg, uint8_t * p_data, uint32_t length)
+uint32_t mpu_read_registers(uint8_t reg, uint8_t * p_data, uint32_t length)
 {
     uint32_t err_code;
     uint32_t timeout = MPU_SPI_TIMEOUT;

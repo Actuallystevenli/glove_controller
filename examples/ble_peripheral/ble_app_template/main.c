@@ -41,8 +41,9 @@
 #include "nrf_gpio.h"
 #include "nrf_drv_twi.h"
 #include "nrf_delay.h"
-#include "mpu6050.h"
-#include "twi_master.h"
+//#include "mpu6050.h"
+//#include "twi_master.h"
+#include "app_mpu.h"
 
 #define NRF_LOG_MODULE_NAME "APP"
 #include "nrf_log.h"
@@ -750,6 +751,18 @@ int main(void)
     err_code = app_button_enable();
     APP_ERROR_CHECK(err_code);
 
+    // Init MPU
+    err_code = mpu_init();
+    APP_ERROR_CHECK(err_code);
+
+    mpu_config_t p_mpu_config = MPU_DEFAULT_CONFIG();
+    p_mpu_config.smplrt_div = 19;   // Change sampelrate. Sample Rate = Gyroscope Output Rate / (1 + SMPLRT_DIV). 19 gives a sample rate of 50Hz
+    p_mpu_config.accel_config.afs_sel = AFS_2G; // Set accelerometer full scale range to 2G
+    err_code = mpu_config(&p_mpu_config);
+    APP_ERROR_CHECK(err_code);
+
+
+
     // Start execution.
     NRF_LOG_INFO("Template started\r\n");
     application_timers_start();
@@ -761,7 +774,11 @@ int main(void)
 		 if (NRF_LOG_PROCESS() == false){
             power_manage();
 		 }
+		 gyro_values_t gyro_data;
+		 err_code = mpu_read_gyro(&gyro_data);
+		 APP_ERROR_CHECK(err_code);
 
+		 NRF_LOG_INFO("Test: %i, %i, %i\r\n", gyro_data.x, gyro_data.y, gyro_data.z);
 	}
 
 }

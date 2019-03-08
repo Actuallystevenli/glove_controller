@@ -10,6 +10,7 @@ $(OUTPUT_DIRECTORY)/nrf51422_xxac.out: \
 
 # Source files common to all targets
 SRC_FILES += \
+  $(SDK_ROOT)/components/drivers_nrf/twi_master/nrf_drv_twi.c \
   $(SDK_ROOT)/components/libraries/log/src/nrf_log_backend_serial.c \
   $(SDK_ROOT)/components/libraries/log/src/nrf_log_frontend.c \
   $(SDK_ROOT)/components/libraries/button/app_button.c \
@@ -59,6 +60,8 @@ SRC_FILES += \
   $(SDK_ROOT)/components/softdevice/common/softdevice_handler/softdevice_handler.c \
   $(SDK_ROOT)/components/ble/ble_services/ble_nus/ble_nus.c \
   $(SDK_ROOT)/examples/ble_peripheral/ble_app_template/main.c \
+  $(SDK_ROOT)/examples/ble_peripheral/ble_app_template/app_mpu.c \
+  $(SDK_ROOT)/examples/ble_peripheral/ble_app_template/nrf_drv_mpu_twi.c \
 
 # Include folders common to all targets
 INC_FOLDERS += \
@@ -164,6 +167,7 @@ INC_FOLDERS += \
   $(SDK_ROOT)/components/softdevice/common/softdevice_handler \
   $(SDK_ROOT)/components/ble/ble_services/ble_hrs \
   $(SDK_ROOT)/components/libraries/log/src \
+  $(SDK_ROOT)/examples/ble_peripheral/ble_app_template \
 
 # Libraries common to all targets
 LIB_FILES += \
@@ -176,6 +180,7 @@ CFLAGS += -DS130
 CFLAGS += -DBLE_STACK_SUPPORT_REQD
 CFLAGS += -DSWI_DISABLE0
 CFLAGS += -DNRF51422
+CFLAGS += -DMPU60x0
 CFLAGS += -DNRF_SD_BLE_API_VERSION=2
 CFLAGS += -mcpu=cortex-m0
 CFLAGS += -mthumb -mabi=aapcs
@@ -197,6 +202,7 @@ ASMFLAGS += -DS130
 ASMFLAGS += -DBLE_STACK_SUPPORT_REQD
 ASMFLAGS += -DSWI_DISABLE0
 ASMFLAGS += -DNRF51422
+ASMFLAGS += -DMPU60x0
 ASMFLAGS += -DNRF_SD_BLE_API_VERSION=2
 
 # Linker flags
