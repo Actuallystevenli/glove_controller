@@ -685,7 +685,7 @@ static void advertising_start(void)
 void send_data(float pitch, float roll, float yaw) {
 	// Only send if we are connected to app
 	if (m_conn_handle != BLE_CONN_HANDLE_INVALID) {
-		float buffer[6] = {pitch, yaw, roll};
+		float buffer[6] = {pitch, roll, yaw};
 
 		ble_nus_t ble;
 		memcpy(&ble, &m_nus, sizeof(ble_nus_t));
@@ -835,7 +835,7 @@ int main(void)
 				 	 roll = roll*0.5 + angle_roll_acc*0.5;
 			 	 }else{
 				 	 pitch = angle_pitch_acc;
-				 	 roll = angle_pitch_acc;
+				 	 roll = angle_roll_acc;	// TODO: CHECK IF THIS IS CORRECT
 				 	 set_gyro_angles = true;
 			 	 }
 
