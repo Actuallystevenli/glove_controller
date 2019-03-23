@@ -2,6 +2,7 @@
  //Developped by Team 12 for ELEC/COEN 490
  //Program functions: advertise and bond with BLE, process and send IMU dat
  
+#define LEFT_GLOVE
 
 #include <stdbool.h>
 #include <stdint.h>
@@ -60,7 +61,11 @@
 #define CENTRAL_LINK_COUNT              0                                           // Number of central links used by the application. If the number needs to be changed , the RAM settings need to be adjusted too
 #define PERIPHERAL_LINK_COUNT           1                                           // Number of peripheral links used by the application.  If the number needs to be changed , the RAM settings need to be adjusted too
 
+#ifndef LEFT_GLOVE
 #define DEVICE_NAME                     "Right_Glove"                           // Name of device. Will be included in the advertising data
+#else
+#define DEVICE_NAME						"Left_Glove"
+#endif
 #define MANUFACTURER_NAME               "Team 12"                       // Name of Manufacturer. Will be passed to Device Information Service. 
 
 #define NUS_SERVICE_UUID_TYPE           BLE_UUID_TYPE_VENDOR_BEGIN                  // UUID type for the Nordic UART Service (vendor specific).
@@ -105,7 +110,11 @@ static uint16_t m_conn_handle = BLE_CONN_HANDLE_INVALID;                        
 static ble_nus_t                        m_nus;                                      // Structure to identify the Nordic UART Service. 
 
 // Need to include UUIDs for sensor and uart services
+#ifndef LEFT_GLOVE
 static ble_uuid_t m_adv_uuids[] = {{BLE_UUID_DEVICE_INFORMATION_SERVICE, BLE_UUID_TYPE_BLE}}; /**< Universally unique service identifiers. */
+#else
+static ble_uuid_t m_adv_uuids[] = {{0xbeef, BLE_UUID_TYPE_BLE}}; /**< Universally unique service identifiers. */
+#endif
 
 // starts advertising BLE
 static void advertising_start(void);
