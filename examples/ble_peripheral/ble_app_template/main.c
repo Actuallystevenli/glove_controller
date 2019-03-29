@@ -2,7 +2,7 @@
  //Developped by Team 12 for ELEC/COEN 490
  //Program functions: advertise and bond with BLE, process and send IMU dat
  
-#define LEFT_GLOVE
+//#define LEFT_GLOVE
 
 #include <stdbool.h>
 #include <stdint.h>
@@ -134,20 +134,20 @@ static void pm_evt_handler(pm_evt_t const * p_evt){
     {
         case PM_EVT_BONDED_PEER_CONNECTED:
         {
-            NRF_LOG_INFO("Connected to a previously bonded device.\r\n");
+            //NRF_LOG_INFO("Connected to a previously bonded device.\r\n");
         } break;
 
         case PM_EVT_CONN_SEC_SUCCEEDED:
         {
-            NRF_LOG_INFO("Connection secured. Role: %d. conn_handle: %d, Procedure: %d\r\n",
-                         ble_conn_state_role(p_evt->conn_handle),
-                         p_evt->conn_handle,
-                         p_evt->params.conn_sec_succeeded.procedure);
+            //NRF_LOG_INFO("Connection secured. Role: %d. conn_handle: %d, Procedure: %d\r\n",
+            //             ble_conn_state_role(p_evt->conn_handle),
+            //             p_evt->conn_handle,
+            //             p_evt->params.conn_sec_succeeded.procedure);
         } break;
 
         case PM_EVT_CONN_SEC_FAILED:
         {
-        	NRF_LOG_INFO("Connection failed to secure\r\n");
+        	//NRF_LOG_INFO("Connection failed to secure\r\n");
             /* Often, when securing fails, it shouldn't be restarted, for security reasons.
              * Other times, it can be restarted directly.
              * Sometimes it can be restarted, but only after changing some Security Parameters.
@@ -158,7 +158,7 @@ static void pm_evt_handler(pm_evt_t const * p_evt){
 
         case PM_EVT_CONN_SEC_CONFIG_REQ:
         {
-        	NRF_LOG_INFO("Reject pairing request from an already bonded peer\r\n");
+        	//NRF_LOG_INFO("Reject pairing request from an already bonded peer\r\n");
             // Rejects pairing request from an already bonded peer.
             pm_conn_sec_config_t conn_sec_config = {.allow_repairing = false};
             pm_conn_sec_config_reply(p_evt->conn_handle, &conn_sec_config);
@@ -166,7 +166,7 @@ static void pm_evt_handler(pm_evt_t const * p_evt){
 
         case PM_EVT_STORAGE_FULL:
         {
-        	NRF_LOG_INFO("Rusn garbage collection on the flash\r\n");
+        	//NRF_LOG_INFO("Rusn garbage collection on the flash\r\n");
             // Rusn garbage collection on the flash.
             err_code = fds_gc();
             if (err_code == FDS_ERR_BUSY || err_code == FDS_ERR_NO_SPACE_IN_QUEUES)
@@ -192,7 +192,7 @@ static void pm_evt_handler(pm_evt_t const * p_evt){
 
         case PM_EVT_PEER_DATA_UPDATE_FAILED:
         {
-        	NRF_LOG_INFO("Peer Data Update failed\r\n");
+        	//NRF_LOG_INFO("Peer Data Update failed\r\n");
             // Assert.
             APP_ERROR_CHECK(p_evt->params.peer_data_update_failed.error);
         } break;
@@ -211,7 +211,7 @@ static void pm_evt_handler(pm_evt_t const * p_evt){
 
         case PM_EVT_ERROR_UNEXPECTED:
         {
-        	NRF_LOG_INFO("Unexpected error\r\n");
+        	//NRF_LOG_INFO("Unexpected error\r\n");
             // Assert.
             APP_ERROR_CHECK(p_evt->params.error_unexpected.error);
         } break;
@@ -229,12 +229,12 @@ static void pm_evt_handler(pm_evt_t const * p_evt){
 
 //Function for the Timer initialization. creates and starts application timers
 //We likely will need one for the sensor
-static void timers_init(void){
+//static void timers_init(void){
 
     // Initialize timer module.
-    APP_TIMER_INIT(APP_TIMER_PRESCALER, APP_TIMER_OP_QUEUE_SIZE, false);
+    //APP_TIMER_INIT(APP_TIMER_PRESCALER, APP_TIMER_OP_QUEUE_SIZE, false);
 
-}
+//}
 
 // Function for the GAP (Generic Access Profile initialization, sets up all device parameters
 static void gap_params_init(void){
@@ -268,7 +268,7 @@ static void gap_params_init(void){
 // Function for handling the data from the Nordic UART Service.This function will process the data received from the Nordic UART BLE Service and send it to the UART module.
 static void nus_data_handler(ble_nus_t * p_nus, uint8_t * p_data, uint16_t length)
 {
-	NRF_LOG_INFO("Data received");
+	//NRF_LOG_INFO("Data received");
 	ble_nus_string_send(p_nus, p_data, length);
 }
 
@@ -351,7 +351,7 @@ static void on_adv_evt(ble_adv_evt_t ble_adv_evt){
     switch (ble_adv_evt)
     {
         case BLE_ADV_EVT_FAST:
-            NRF_LOG_INFO("Fast advertising\r\n");
+            //NRF_LOG_INFO("Fast advertising\r\n");
             err_code = bsp_indication_set(BSP_INDICATE_ADVERTISING);
             APP_ERROR_CHECK(err_code);
             break;
@@ -368,18 +368,18 @@ static void on_adv_evt(ble_adv_evt_t ble_adv_evt){
 // Function for handling the Application's BLE Stack events.
 static void on_ble_evt(ble_evt_t * p_ble_evt){
     uint32_t err_code = NRF_SUCCESS;
-    nrf_gpio_cfg_output(STATUS_LED);
+    //nrf_gpio_cfg_output(STATUS_LED);
 
     switch (p_ble_evt->header.evt_id){
         case BLE_GAP_EVT_DISCONNECTED:
-            NRF_LOG_INFO("Disconnected.\r\n");
+            //NRF_LOG_INFO("Disconnected.\r\n");
             err_code = bsp_indication_set(BSP_INDICATE_IDLE);
             APP_ERROR_CHECK(err_code);
             m_conn_handle = BLE_CONN_HANDLE_INVALID;
             break; // BLE_GAP_EVT_DISCONNECTED
 
         case BLE_GAP_EVT_CONNECTED: {
-            NRF_LOG_INFO("Connected.\r\n");
+            //NRF_LOG_INFO("Connected.\r\n");
             err_code = bsp_indication_set(BSP_INDICATE_CONNECTED);
             APP_ERROR_CHECK(err_code);
             m_conn_handle = p_ble_evt->evt.gap_evt.conn_handle;
@@ -387,7 +387,7 @@ static void on_ble_evt(ble_evt_t * p_ble_evt){
 					}
         case BLE_GATTC_EVT_TIMEOUT:
             // Disconnect on GATT Client timeout event.
-            NRF_LOG_DEBUG("GATT Client Timeout.\r\n");
+            //NRF_LOG_DEBUG("GATT Client Timeout.\r\n");
             err_code = sd_ble_gap_disconnect(p_ble_evt->evt.gattc_evt.conn_handle,
                                              BLE_HCI_REMOTE_USER_TERMINATED_CONNECTION);
             APP_ERROR_CHECK(err_code);
@@ -395,7 +395,7 @@ static void on_ble_evt(ble_evt_t * p_ble_evt){
 
         case BLE_GATTS_EVT_TIMEOUT:
             // Disconnect on GATT Server timeout event.
-            NRF_LOG_DEBUG("GATT Server Timeout.\r\n");
+            //NRF_LOG_DEBUG("GATT Server Timeout.\r\n");
             err_code = sd_ble_gap_disconnect(p_ble_evt->evt.gatts_evt.conn_handle,
                                              BLE_HCI_REMOTE_USER_TERMINATED_CONNECTION);
             APP_ERROR_CHECK(err_code);
@@ -546,35 +546,35 @@ static void peer_manager_init(bool erase_bonds){
 }
 
 // Function for handling events from the BSP module.
-static void bsp_event_handler(bsp_event_t event){
-    uint32_t err_code;
-
-    switch (event){
-        case BSP_EVENT_SLEEP:
-            sleep_mode_enter();
-            break; // BSP_EVENT_SLEEP
-
-        case BSP_EVENT_DISCONNECT:
-            err_code = sd_ble_gap_disconnect(m_conn_handle,
-                                             BLE_HCI_REMOTE_USER_TERMINATED_CONNECTION);
-            if (err_code != NRF_ERROR_INVALID_STATE)  {
-                APP_ERROR_CHECK(err_code);
-            }
-            break; // BSP_EVENT_DISCONNECT
-
-        case BSP_EVENT_WHITELIST_OFF:
-            if (m_conn_handle == BLE_CONN_HANDLE_INVALID) {
-                err_code = ble_advertising_restart_without_whitelist();
-                if (err_code != NRF_ERROR_INVALID_STATE) {
-                    APP_ERROR_CHECK(err_code);
-                }
-            }
-            break; // BSP_EVENT_KEY_0
-
-        default:
-        break;
-    }
-}
+//static void bsp_event_handler(bsp_event_t event){
+//    uint32_t err_code;
+//
+//    switch (event){
+//        case BSP_EVENT_SLEEP:
+//            sleep_mode_enter();
+//            break; // BSP_EVENT_SLEEP
+//
+//        case BSP_EVENT_DISCONNECT:
+//            err_code = sd_ble_gap_disconnect(m_conn_handle,
+//                                             BLE_HCI_REMOTE_USER_TERMINATED_CONNECTION);
+//            if (err_code != NRF_ERROR_INVALID_STATE)  {
+//                APP_ERROR_CHECK(err_code);
+//            }
+//            break; // BSP_EVENT_DISCONNECT
+//
+//        case BSP_EVENT_WHITELIST_OFF:
+//            if (m_conn_handle == BLE_CONN_HANDLE_INVALID) {
+//                err_code = ble_advertising_restart_without_whitelist();
+//                if (err_code != NRF_ERROR_INVALID_STATE) {
+//                    APP_ERROR_CHECK(err_code);
+//                }
+//            }
+//            break; // BSP_EVENT_KEY_0
+//
+//        default:
+//        break;
+//    }
+//}
 
 // Function for handling app_uart events.
 void uart_event_handle(app_uart_evt_t * p_event)
@@ -615,27 +615,27 @@ void uart_event_handle(app_uart_evt_t * p_event)
 }
 
 //  Function for initializing the UART module.
-static void uart_init(void)
-{
-    uint32_t                     err_code;
-    const app_uart_comm_params_t comm_params = {
-        RX_PIN_NUMBER,
-        TX_PIN_NUMBER,
-        RTS_PIN_NUMBER,
-        CTS_PIN_NUMBER,
-        APP_UART_FLOW_CONTROL_DISABLED,
-        false,
-        UART_BAUDRATE_BAUDRATE_Baud115200
-    };
-
-    APP_UART_FIFO_INIT( &comm_params,
-                       UART_RX_BUF_SIZE,
-                       UART_TX_BUF_SIZE,
-                       uart_event_handle,
-                       APP_IRQ_PRIORITY_LOWEST,
-                       err_code);
-    APP_ERROR_CHECK(err_code);
-}
+//static void uart_init(void)
+//{
+//    uint32_t                     err_code;
+//    const app_uart_comm_params_t comm_params = {
+//        RX_PIN_NUMBER,
+//        TX_PIN_NUMBER,
+//        RTS_PIN_NUMBER,
+//        CTS_PIN_NUMBER,
+//		APP_UART_FLOW_CONTROL_DISABLED,
+//        false,
+//        UART_BAUDRATE_BAUDRATE_Baud115200
+//    };
+//
+//    APP_UART_FIFO_INIT( &comm_params,
+//                       UART_RX_BUF_SIZE,
+//                       UART_TX_BUF_SIZE,
+//                       uart_event_handle,
+//                       APP_IRQ_PRIORITY_LOWEST,
+//                       err_code);
+//    APP_ERROR_CHECK(err_code);
+//}
 
 // Function for initializing the Advertising functionality.
 static void advertising_init(void){
@@ -667,21 +667,21 @@ static void advertising_init(void){
 }
 
 // Function for initializing buttons and leds.
-static void buttons_leds_init(bool * p_erase_bonds){
-    uint32_t err_code = bsp_init(BSP_INIT_LED,
-                                 APP_TIMER_TICKS(100, APP_TIMER_PRESCALER),
-                                 bsp_event_handler);
+//static void buttons_leds_init(bool * p_erase_bonds){
+    //uint32_t err_code = bsp_init(BSP_INIT_LED,
+                                 //APP_TIMER_TICKS(100, APP_TIMER_PRESCALER),
+                                 //bsp_event_handler);
 
-    APP_ERROR_CHECK(err_code);
-}
+    //APP_ERROR_CHECK(err_code);
+//}
 
 // Function for the Power manager.
-static void power_manage(void)
-{
-    uint32_t err_code = sd_app_evt_wait();
-
-    APP_ERROR_CHECK(err_code);
-}
+//static void power_manage(void)
+//{
+//    uint32_t err_code = sd_app_evt_wait();
+//
+//    APP_ERROR_CHECK(err_code);
+//}
 
 // Function for starting advertising.
 static void advertising_start(void)
@@ -734,29 +734,44 @@ int main(void)
     int gyro_cal_y = 0;
     int gyro_cal_z = 0;
     int count = 0;
-    int cal_count = 0;
+    //int cal_count = 0;
 
     bool set_gyro_angles;
 
     // Initialize.
 	APP_TIMER_INIT(APP_TIMER_PRESCALER, APP_TIMER_OP_QUEUE_SIZE, false);
-    uart_init();
+    //uart_init();
 
     err_code = NRF_LOG_INIT(NULL);
     APP_ERROR_CHECK(err_code);
 
-    timers_init();
-    buttons_leds_init(&erase_bonds);
+    //timers_init();
+   // buttons_leds_init(&erase_bonds);
     ble_stack_init();
     peer_manager_init(erase_bonds);
     if (erase_bonds == true)
     {
-        NRF_LOG_INFO("Bonds erased!\r\n");
+        //NRF_LOG_INFO("Bonds erased!\r\n");
     }
     gap_params_init();
     advertising_init();
     services_init();
     conn_params_init();
+
+    // Init button
+    //app_button_cfg_t button_cfg;
+    //button_cfg.pin_no = BUTTON;
+    //button_cfg.active_state = APP_BUTTON_ACTIVE_HIGH;
+    //button_cfg.pull_cfg = GPIO_PIN_CNF_PULL_Pullup;
+    //button_cfg.button_handler = NULL;
+
+    //err_code = app_button_init(&button_cfg, 1, 5);
+    //APP_ERROR_CHECK(err_code);
+
+    //err_code = app_button_enable();
+    //APP_ERROR_CHECK(err_code);
+
+    //bool isButtonPressed = app_button_is_pushed(0);
 
     // Init MPU
     err_code = mpu_init();
@@ -770,15 +785,16 @@ int main(void)
     APP_ERROR_CHECK(err_code);
 
     // Start execution.
-    NRF_LOG_INFO("Template started\r\n");
+    //NRF_LOG_INFO("Template started\r\n");
     application_timers_start();
     err_code = ble_advertising_start(BLE_ADV_MODE_FAST);
     APP_ERROR_CHECK(err_code);
 
     gyro_values_t gyro_data;
     accel_values_t acc_data;
-    nrf_gpio_cfg_output(STATUS_LED);
+    //nrf_gpio_cfg_output(STATUS_LED);
     nrf_gpio_cfg_input(BUTTON, NRF_GPIO_PIN_PULLUP);
+
 
     //nrf_gpio_cfg_input(BATTERY_STATUS, NRF_GPIO_PIN_PULLUP);
     if (m_conn_handle != BLE_CONN_HANDLE_INVALID){
@@ -788,25 +804,25 @@ int main(void)
     			gyro_cal_x += gyro_data.x;
     			gyro_cal_y += gyro_data.y;
     			gyro_cal_z += gyro_data.z;
-    			nrf_gpio_pin_clear(STATUS_LED);
+    			//nrf_gpio_pin_clear(STATUS_LED);
     			nrf_delay_ms(3);
     			if (cal % 16 == 0 || cal % 16 == 1 || cal % 16 == 2 || cal % 16 == 3 || cal % 16 == 4 || cal %16 == 5 || cal % 16 == 6 || cal % 16 == 7){
-    				nrf_gpio_pin_set(STATUS_LED);
+    				//nrf_gpio_pin_set(STATUS_LED);
     			}
-    			cal_count = cal;
+    			//cal_count = cal;
     	}
     //Computes the average of the first 2000 gyro samples
     	gyro_cal_x /= 2000;
     	gyro_cal_y /= 2000;
     	gyro_cal_z /= 2000;
-    	NRF_LOG_INFO("%i\r\n", cal_count);
+    	//NRF_LOG_INFO("%i\r\n", cal_count);
     }else{
-    	nrf_gpio_pin_clear(STATUS_LED);
+    	//nrf_gpio_pin_clear(STATUS_LED);
     }
 	 // Enter main loop.
 	 for (;;) {
 		 if (NRF_LOG_PROCESS() == false){
-            power_manage();
+            //power_manage();
 		 }
 		 if(m_conn_handle != BLE_CONN_HANDLE_INVALID){
 
@@ -819,6 +835,7 @@ int main(void)
 			 mpu_read_gyro(&gyro_data);
 		 	 mpu_read_accel(&acc_data);
 
+		 	 //if (true) {
 		 	 if(!nrf_gpio_pin_read(BUTTON)){
 			 	 //Calibration, should all be initially 0
 			 	 gyro_x = (gyro_data.x - gyro_cal_x)/75;
@@ -856,18 +873,18 @@ int main(void)
 			 	 //NRF_LOG_INFO(""NRF_LOG_FLOAT_MARKER", "NRF_LOG_FLOAT_MARKER"\r\n", NRF_LOG_FLOAT(pitch), NRF_LOG_FLOAT(roll));
 
 			 	 if(count % 8 == 0 || count % 8 == 1 || count % 8 == 2 || count % 8 == 3){
-				 	 nrf_gpio_pin_clear(STATUS_LED);
+				 	 //nrf_gpio_pin_clear(STATUS_LED);
 			 	 }else{
-				 	 nrf_gpio_pin_set(STATUS_LED);
+				 	 //nrf_gpio_pin_set(STATUS_LED);
 			 	 }
 			 	 count++;
 		 	 }else{
 			 	 send_data(0.0, 0.0, 0.0);
 			 	 nrf_delay_ms(150);
-			 	 nrf_gpio_pin_set(STATUS_LED);
+			 	 //nrf_gpio_pin_set(STATUS_LED);
 		 	 }
 		 }else{
-			 nrf_gpio_pin_clear(STATUS_LED);
+			 //nrf_gpio_pin_clear(STATUS_LED);
 		 }
 	}
 }

@@ -22,6 +22,7 @@ void ble_mpu_on_ble_evt(ble_mpu_t * p_mpu, ble_evt_t * p_ble_evt)
             break;
         case BLE_GAP_EVT_DISCONNECTED:
             p_mpu->conn_handle = BLE_CONN_HANDLE_INVALID;
+            break;
         default:
             // No implementation needed.
             break;
